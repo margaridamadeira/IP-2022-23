@@ -5,6 +5,7 @@ Na resolução, tente simular o ambiente da festa: concentre-se e tente resolver
 
 ## Câmbio
 
+
 ```{figure} ./figures/MoneyExchange.jpg
 ---
 width: 200px
