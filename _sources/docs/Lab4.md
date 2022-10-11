@@ -1,313 +1,340 @@
-# Lab4
+# Lab5
 
 ## Objetivos de aprendizagem
 
 Com este guião, exercitaremos:
 
-1. a validação de dados de entrada
-1. o uso de condições no controlo de fluxo do programa (com *if* e *while*) 
-1. o desenvolvimento de programas
+1. a leitura da consola, vários valores por linha e até ao fim dos dados
+1. escrita formatada
+1. a utilização de listas
 
 ## Enunciado
 
+Submeta cada uma das tarefas no problema correspondente do concurso IP_L5.
+
+
 ### Tarefa A
 
-Na aula vimos o desenvolvimento de funções para o cálculo do fatorial de um número. 
+Pretende-se a ordenação crescente de sequências de números. Não sabemos quantas sequências temos nem quantos elementos por sequência. Para cada linha lida, ordenamos os elementos e apresentamos a sequência ordenada.
 
-Pretendemos agora incluir uma dessas funções num programa, incluindo na função de teste a verificação de que a entrada é válida.
+Vamos então preparar um programa que receba da consola, até ao fim dos dados, linhas com sequências de inteiros e, para cada linha, apresente a sequência por ordem crescente, com cada elemento separado por um espaço. 
 
-Note que o fatorial de um número está definido para números inteiros positivos ($N_0^+$). Ou seja, não se aceitam valores negativos ou strings. 
+Porque queremos um programa "completo", começamos pelas linhas que indicam ao Python que deve começar pela função de teste, ou seja
 
-Assim, se o cálculo não puder ser efetuado, o seu programa deverá produzir a mensagem (sem as aspas):
-    "A função fatorial está definida para números inteiros maiores ou iguais a zero."
-a um pedido de cálculo ilegal.
-
-Prepare então um programa calcule o fatorial de um número e valide os dados de entrada.
-
-**Dicas**:
-
-Veja a ajuda sobre a função *str.isnumeric*
-
-Para os diferentes casos de input, experimente na consola do Spyder:
 ```
-temp = input()
-temp.isnumeric()
+test_ordem_crescente()
 ```
+
+Em seguida, sabemos que precisaremos da função de  *test_ordem_crescente*, responsável pela leitura, da função *ordem_crescente* e de uma função para apresentação dos resultados, seja *mostra_sequência_separada_por_espaços*. 
+Mantemos as funções vazias (*pass* para indicar que não há nada a fazer).
+
+
+O esboço do nosso programa fica assim:
+
+```
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""Resolução guiada
+L4 - A
+Programa que recebe da consola, até ao fim dos dados, 
+linhas com sequências de inteiros e, 
+para cada linha, apresenta a sequência por ordem crescente, 
+com cada elemento separado por um espaço.
+
+"""
+
+
+def ordem_crescente():
+    """Ordena uma sequência de números inteiros"""
+    pass
+
+def mostra_sequência_separada_por_espaços():
+    """Apresenta os números inteiros separados por espaço"""
+    pass
+
+def test_ordem_crescente():
+    """Lê várias linhas e, para cada linha lida, manda ordenar e mostrar."""
+    pass  
+
+test_ordem_crescente()
+```
+
+Usamos a abordagem apresentada para a {ref}`Leitura`.
+Começamos por passar cada linha para uma lista e, para verificar, usamos uma primeira versão da função *mostra_sequência_separada_por_espaços*, que apresenta a lista ainda não formatada.
+
+Usamos também algo que nos ajuda quando as funções começam a ser muitas: identificamos os tipos de dados, para que fique claro como estamos a organizar as atividades do programa. E depois a ajuda em linha também apresenta essa informação. Isto é opcional e apenas indicativo, o Python não vai verificar se os argumentos usados na chamada da função são ou não do tipo sugerido.
+
+
+O nosso programa ficaria então assim:
+
+```
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""Resolução guiada
+L4 - A
+Programa que recebe da consola, até ao fim dos dados, 
+linhas com sequências de inteiros e, 
+para cada linha, apresenta a sequência por ordem crescente, 
+com cada elemento separado por um espaço.
+
+"""
+import sys
+
+def ordem_crescente(a: list) -> list:
+    """Ordena uma sequência de números inteiros"""
+    pass
+
+def mostra_sequência_separada_por_espaços(a: list) -> None:
+    """
+    Função que apresenta uma lista, cada elemento separado por espaço.
+    """
+    print(a)
+
+def test_ordem_crescente():
+    """Lê várias linhas e, para cada linha lida, manda ordenar e mostrar."""
+    while True:
+        try:
+            linha = input().split()
+        except (EOFError, KeyboardInterrupt):
+            sys.exit(0)
+        if linha:
+            mostra_sequência_separada_por_espaços(linha)
+        else:
+            sys.exit(0)
+
+    
+
+test_ordem_crescente()
+
+```
+
+
+Com o nosso código num ficheiro chamado *ordenar_lista.py*, experimentamos.
+
+```
+python ordenar_lista.py 
+1 4 7 3 6 2
+['1', '4', '7', '3', '6', '2']
+```
+
+O resultado ainda não é exatamente o que pretendíamos.
+
+Em primeiro lugar, a lista devia ser de inteiros. Há que converter! Podemos conseguir isso alterando o bloco do *try* para
+
+```
+            linha = input().split()
+            lista = [int(x) for x in linha]
+```
+
+e, claro, revendo as utilizações da lista *linha*.
+
+
+Em segundo lugar, era pedido que entre cada dois elementos existisse um espaço.
+Aliás, deve haver um espaço entre cada dois elementos, mas não pode haver um espaço antes do primeiro elemento nem um espaço depois do último.
+
+A nossa função *mostra_sequência_separada_por_espaços* poderia ficar assim, criando a string de saída e depois apresentando-a.
+
+```
+def mostra_sequência_separada_por_espaços(a: list) -> None:
+    """
+    Função que apresenta uma lista, cada elemento separado por espaços.
+    """
+    resultado = ''
+    for i in a: 
+        if len(resultado) == 0:
+            resultado = str(i)
+        else:
+            resultado = resultado + ' ' + str(i)
+    print(resultado)
+```
+
+Experimentemos outra vez. Deveremos ver o que introduzimos.
+
+Ora o que falta agora é a ordenação da lista. O Python tem essa função mas há que ter cuidado pois essa função altera a lista original. Complete agora a função *ordem_crescente* para a ordenação crescente dos elementos inteiros de uma lista, inclua a chamada na função *test_ordem_crescente* e teste.
+
 
 #### Casos de teste 
 
 **Input 1**
 
 ```
-5
+2 9 1 8 6
+
 ```
 
 **Output 1**
 
 ```
-120
+1 2 6 8 9
 ```
 
 **Input 2**
 
 ```
-5.0
+1 4 7 3 6 2
+34 27 39 6 2 100
+5 -5 10 -10 -50 250
+
+
 ```
 
 **Output 2**
 
 ```
-A função fatorial está definida para números inteiros maiores ou iguais a zero.
+1 2 3 4 6 7
+2 6 27 34 39 100
+-50 -10 -5 5 10 250
 ```
 
-**Input 3**
-
-```
--5
-```
-
-**Output 3**
-
-```
-A função fatorial está definida para números inteiros maiores ou iguais a zero.
-```
-
-**Input 4**
-
-```
-asd
-```
-
-**Output 4**
-
-```
-A função fatorial está definida para números inteiros maiores ou iguais a zero.
-```
-
-
-Submeta no problema A do Lab2.
+Submeta no problema A.
 
 ### Tarefa B
 
-Pretende-se determinar os números pares de um intervalo. Para o efeito, considere o esboço apresentado em *proto_B.py*
+Num centro de atendimento ao cliente a duração das diferentes chamadas é cronometrada de forma automática, em segundos. Para saber se a capacidade de atendimento de cada turno está prestes a esgotar-se, queremos saber a duração total de cada turno em horas, minutos e segundos.
 
-```
-# -*- coding: utf-8 -*-
+Prepare um programa em Python que leia uma sequência de números, um por linha e, para cada número lido, apresente esse valor no formato HH:MM:SS.
 
-"""
-Determinar os números pares de um intervalo
-(c) Margarida Madeira e Moura, 2021
-"""
-
-def par(n):
-    """Função que determina se um número é par.
-    
-    par(n) devolve True se n for par; caso contrário, devolve False"""
-    ## Apague esta linha e acrescente aqui o seu código
-
-def escreve(n):
-    """Função que imprime um valor"""
-    print(n)
-    
-def test_par():
-    """Função de teste da função par
-    Apresenta o valor sse o número for par"""
-    x = int(input())
-    if (par(x)):
-        escreve(x)
-
-def pares_intervalo(x, y):
-    """Função que apresenta os números pares de um intervalo"""
-    
-    ## Apague esta linha e acrescente aqui o seu código
-
-
-def test_intervalo_inteiros():
-    """Função que lê os valores extremos de um intervalo de números inteiros"""
-    x = int(input())
-    y = int(input())
-    valido = False
-    # acrescente a validação
-    # # x tem que ser inferior a y
-    if (valido):
-        pares_intervalo(x,y)
-    else:
-        print('Valores inválidos.')
-
-
-test_par()
-# test_intervalo_inteiros()
-
-```
-
-
-Comece por completar a função *par*. 
-
-Depois, comente a chamada à função *test_par* e descomente a linha seguinte que contém a chamada à função *test_intervalo_inteiros*. 
-
-Depois, conclua a validação na função *test_intervalo_inteiros* e, finalmente, complete a função *pares_intervalo*.
-
-#### Casos de teste
+#### Casos de teste 
 
 **Input 1**
 
 ```
-1
-5
+7505
 ```
 
 **Output 1**
 
 ```
-2
-4
+02:05:05
 ```
 
 **Input 2**
 
 ```
-10
-1
+44135
 ```
 
 **Output 2**
 
 ```
-Valores inválidos.
+12:15:35
 ```
+
 
 **Input 3**
 
 ```
--5
--1
+7505
+44135
 ```
 
 **Output 3**
 
 ```
--4
--2
+02:05:05
+12:15:35
 ```
 
-**Input 4**
-
-```
-1
-10
-```
-
-**Output 4**
-
-```
-2
-4
-6
-8
-10
-```
-
-Submeta no problema B do Lab2.
+Submeta no problema B.
 
 ### Tarefa C
 
-Pretende-se determinar os números de um intervalo de inteiros que são múltiplos de três e múltiplos de cinco.
+Atualizamos os equipamentos e agora os tempos de cada turno são apresentados em horas, minutos e segundos. Queremos saber o tempo total gasto nos turnos, em dias, horas, minutos e segundos.
 
-#### Casos de teste
+Podíamos converter os tempos para segundos e depois de termos um total, converter então para o formato desejado. Mas a nossa conversão não considerava a possibilidade de traduzir valores de horas superiores a 24 em dias e horas. Assim, vamos lendo a duração das experiências e atualizando o tempo total.
+
+Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos dados e apresente, para cada linha lida, o tempo acumulado em dias, horas, minutos e segundos. Cada linha contém uma string com o formato *HH:MM:SS* em que *HH* correponde às horas, *MM* corresponde aos minutos e *SS* aos segundos. O tempo total, que deve ser apresentado num única linha, deverá respeitar o formato "DD:HH:MM:SS" (sem as aspas), em que *DD*, *HH*, *MM* e *SS* correspondem ao valores de dias, horas, minutos e segundos, respetivamente. Note que deve usar dois dígitos para cada valor.
+
+
+
+#### Casos de teste 
 
 **Input 1**
 
 ```
-1
-20
+02:05:05
 ```
 
 **Output 1**
 
 ```
-15
+00:02:05:05
 ```
 
 **Input 2**
 
 ```
-10
-1
+02:05:05
+12:15:35
+24:00:00
+12:45:20
 ```
 
 **Output 2**
 
 ```
-Valores inválidos.
+00:02:05:05
+00:14:20:40
+01:14:20:40
+02:03:06:00
 ```
 
-Submeta no problema C do Lab2.
+Submeta no problema C.
 
 ### Tarefa D
 
-Pretende-se determinar um termo da [sequência de Fibonacci](https://www.wolframalpha.com/input/?i=fibonacci+sequence).
+Estamos a registar o trabalho e verificámos que muitas vezes há erros na introdução das datas. É preciso então validar as datas introduzidas. 
 
-Prepare um programa que leia um inteiro $n$ e apresente o $n$-ésimo termo da sequência $F(n)$, considerando que
+Usamos o [formato padrão](https://pt.wikipedia.org/wiki/ISO_8601), *YYYY-MM-DD* em que *YYYY* representa o ano, *MM* representa o mês e *DD* o dia. Para simplificar, vamos considerar o [calendário gregoriano](https://pt.wikipedia.org/wiki/Ano_bissexto), ou seja, que temos datas a partir de 1582.
 
-$ F(n) = F(n-1) + F(n-2)$ para $n \in N_0^+ $
+Relembremos agora as regras para as datas. Os meses são 12, isso é simples. Os dias variam, como sabemos do ditado popular: "Trinta dias tem novembro, abril, junho e setembro, vinte e oito terá um e os mais têm trinta e um". Fevereiro terá 28 dias, ou, num ano bissexto, 29. Um ano bissexto é divisível por quatro mas, se for um ano secular só será bissexto se for divisível por 400. E um ano secular é um ano divisível por 100.
 
-sendo 
-
-$F(0) = 0$ e $ F(1) = 1$.
-
-Se o termo pedido não for válido, o programa apresenta a mensagem "Valor inválido." (sem as aspas).
-
-Inclua a validação do inteiro lido na função de teste.
+Prepare um programa que leia as datas da consola, uma por linha, até ao fim dos dados. Por cada linha lida, o seu programa deve repetir a data lida, indicando se é válida ou não. Cada linha do input conterá *YYYY-MM-DD* em que *YYYY*, *MM* e *DD* são inteiros maiores que zero e representam ano, mês e dia, respetivamente. 
+Cada linha do output repetirá o input acrescentando " -> Válida" (sem as aspas) ou " -> Inválida" (sem as aspas), se a data for válida ou não, respetivamente. 
 
 #### Casos de teste
 
 **Input 1**
 
 ```
--5
+2020-03-31
+2020-03-45
+2020-04-30
+2020-04-31
+2020-04-45
+2019-02-28
+2019-02-29
+1600-02-29
+1700-02-29
+1800-02-29
+1900-02-29
+2000-02-29
+2019-02-29
+2020-02-29
+2020-02-30
 ```
 
 **Output 1**
 
 ```
-Valor inválido.
-```
-
-**Input 2**
-
-```
-0
-```
-
-**Output 2**
-
-```
-0
-```
-
-**Input 3**
-
-```
-1
-```
-
-**Output 3**
-
-```
-1
-```
-
-**Input 4**
-
-```
-7
-```
-
-**Output 4**
-
-```
-13
+2020:03:31 -> Válida
+2020:03:45 -> Inválida
+2020:04:30 -> Válida
+2020:04:31 -> Inválida
+2020:04:45 -> Inválida
+2019:02:28 -> Válida
+2019:02:29 -> Inválida
+1600:02:29 -> Válida
+1700:02:29 -> Inválida
+1800:02:29 -> Inválida
+1900:02:29 -> Inválida
+2000:02:29 -> Válida
+2019:02:29 -> Inválida
+2020:02:29 -> Válida
+2020:02:30 -> Inválida
 ```
 
 
-Submeta no problema D do Lab2.
+Submeta no problema D.
