@@ -8,6 +8,9 @@ Com este guião, exercitaremos:
 1. escrita formatada
 1. a utilização de listas
 
+## Enunciado
+
+Submeta cada uma das tarefas no problema correspondente do concurso IP_L5.
 
 
 ### Tarefa A
@@ -185,7 +188,7 @@ Ora o que falta agora é a ordenação da lista. O Python tem essa função mas 
 -50 -10 -5 5 10 250
 ```
 
-Submeta no problema A do concurso Lab4.
+Submeta no problema A.
 
 ### Tarefa B
 
@@ -234,7 +237,7 @@ Prepare um programa em Python que leia uma sequência de números, um por linha 
 12:15:35
 ```
 
-Submeta no problema B do Lab4.
+Submeta no problema B.
 
 ### Tarefa C
 
@@ -278,7 +281,7 @@ Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos
 02:03:06:00
 ```
 
-Submeta no problema C do Lab4.
+Submeta no problema C.
 
 ### Tarefa D
 
@@ -334,4 +337,4 @@ Cada linha do output repetirá o input acrescentando " -> Válida" (sem as aspas
 ```
 
 
-Submeta no problema D do Lab4.
+Submeta no problema D.

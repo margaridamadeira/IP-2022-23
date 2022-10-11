@@ -1,4 +1,6 @@
-# Lab8
+#Lab8
+
+Submeta cada uma das tarefas ....
 
 
 Estas tarefas foram apresentadas na segunda festa do ano letivo de 2020-2021. Este guião vai ajudar a preparar a próxima festa.
@@ -34,7 +36,7 @@ Assim, se quiser obter manualmente o dígito de controlo para o código "0360002
 
 Preciso de um programa para determinar o dígito de controlo.
 
-### Tarefa
+### Tarefa A
 
 Prepare um programa em Python completando que determine o dígito de controlo de um código universal de produto. O programa recebe, da consola, uma única linha contendo 11 carateres numéricos e a letra 'x' e devolverá o dígito de controlo.
 
@@ -76,7 +78,7 @@ Prepare um programa em Python completando que determine o dígito de controlo de
 0
 ```
 
-Submeta no problema A do concurso IPC_L7.
+Submeta no problema A.
 
 ## Eficácia
 
@@ -93,7 +95,7 @@ A eficácia de um produto numa amostra é marcada com *1* se o produto é eficaz
 
 Pretendo uma listagem ordenada dos produtos que têm uma eficácia superior a um valor *v*.
 
-### Tarefa
+### Tarefa B
 
 Prepare um programa em Python para produzir a listagem pretendida. 
 
@@ -159,7 +161,7 @@ Azul de metileno,0,1,1
 Não há produtos com a eficácia pretendida.
 ```
 
-Submeta no problema B do concurso IPC_L7.
+Submeta no problema B.
 
 ## Maior subida de temperatura
 
@@ -174,7 +176,7 @@ Porque muitas das nossas experiências que funcionaram de forma anómala depende
 Houve alturas em que se verificou uma sequência crescente, ou seja, um conjunto de medidas T em que $t_n < t_{n+1}$.
 Para analisarmos a evolução das temperaturas, queremos identificar a maior amplitude das sequências crescentes de temperatura.
 
-### Tarefa
+### Tarefa C
 
 Dada uma série de medidas de temperatura obtidas durante a realização de uma experiência, pretende-se identificar qual a maior amplitude das sequências crescentes de temperatura. 
 
@@ -258,4 +260,4 @@ O programa deve apresentar um número real com 4 casas decimais que corresponde 
 32.0000
 ```
 
-Submeta no problema C do concurso IPC_L7.
+Submeta no problema C.

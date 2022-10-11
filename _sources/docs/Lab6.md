@@ -9,6 +9,7 @@ Idealmente, reserve três horas e tente resolver os exercícios da festa de form
 
 Antes disso, reúna todos os seus materiais para consulta durante a festa e os seus programas anteriores (os que estão no Mooshak pode sempre ir lá buscá-los). Prepare uma pasta para cada problema que vai abordar, e a versão inicial da sua resolução.
 
+Submeta cada uma das tarefas no problema correspondente do concurso IP_Lx.
 
 ## IMC
 

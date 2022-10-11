@@ -1,4 +1,6 @@
-# Lab7
+#Lab7
+
+**Substituir tema pelo de Lab3_.md: postos de combustível**. Refazer o enunciado
 
 ## Objetivos de aprendizagem
 
@@ -8,7 +10,12 @@ Com este guião exercitaremos:
 1. escrita formatada
 1. uso de dicionários
 
-## Elementos da tabela periódica
+## Enunciado
+
+Submeta cada uma das tarefas no problema correspondente do concurso IP_Lx.
+
+### Elementos da tabela periódica
+
 
 Acompanhado pela irmã, o Rui continua a estudar química. Para que possa verificar os resultados, vamos preparar uma solução em Python para calcular o peso de algumas moléculas.
 
@@ -21,7 +28,7 @@ name: TabelaPeriodica
 
 ```
 
-### Descrição do caso
+#### Descrição do caso
 
 O fluxo elementar dos programas é ler, processar, escrever. Ao começarmos por ler e escrever sabemos que estamos a tratar *bem* os dados e podemos depois concentrar a atenção no processamento.
 
@@ -84,7 +91,7 @@ O ficheiro não terá mais de 150 linhas e cada linha não terá mais de oitenta
        Fluorine (F ) 1.900e+01
 ```
 
-Submeta no problema A do concurso IPC_L6.
+Submeta no problema A do concurso IP_L6.
 
 ### Tarefa B: organizar por símbolo químico
 
@@ -146,7 +153,7 @@ None
          Oxygen (O ) 1.600e+01
 ```
 
-Submeta no problema B do concurso IPC_L6.
+Submeta no problema B do concurso IP_L6.
 
 ### Tarefa C: calcular peso de moléculas
 
@@ -193,4 +200,4 @@ CO2
 4.401e+01
 ```
 
-Submeta no problema C do concurso IPC_L6.
+Submeta no problema C do concurso IP_L6.

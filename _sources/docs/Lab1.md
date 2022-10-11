@@ -18,9 +18,7 @@ Para a conversão de e para Fahrenheit, precisamos saber que 0⁰C corresponde a
 
 Queremos pois um conjunto de programas que convertam as temperaturas de e para as várias unidades ou escalas. 
 
-Submeta cada uma das tarefas no problema correspondente do concurso IPC_L1.
-
-Cada tarefa aceite e validada vale 1 ponto.
+Submeta cada uma das tarefas no problema correspondente do concurso IP_L1 e depois de aceites valide-as no prazo de uma semana.
 
 ### Tarefa A
 

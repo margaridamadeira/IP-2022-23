@@ -66,7 +66,7 @@ O input consiste em duas linhas, ambas representativas de números reais, sendo 
 1.1374283
 ```
 
-Submeta na tarefa A do concurso IPC_L2.
+Submeta na tarefa A do concurso IP_L2.
 
 <div style="page-break-after: always"></div>
 
@@ -95,7 +95,7 @@ Prepare um programa em Python que converta uma distância indicada pé para cent
 O input é uma única linha contendo um número inteiro que corresponde à distância em pé.
 O output é um número real que corresponde à distância em centímetro.
 
-**Requisito técnico**: deve usar a função ```converte_polegada_para_centimetro``` que foi fornecida no IPC_L0. 
+**Requisito técnico**: deve usar a função ```converte_polegada_para_centimetro``` que foi fornecida no IP_L0. 
 
 
 **Casos de teste**
@@ -136,6 +136,6 @@ O output é um número real que corresponde à distância em centímetro.
 152.4
 ```
 
-Submeta na tarefa B do concurso IPC_L2.
+Submeta na tarefa B do concurso IP_L2.
 
 <div style="page-break-after: always"></div>

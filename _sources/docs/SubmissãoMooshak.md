@@ -38,7 +38,7 @@ Página de entrada do Mooshak.
 
 Para entrar, escolhemos o concurso e preenchemos as credenciais, isto é, utilizador e palavra-chave.
 
-Para seguir este exemplo, escolha o concurso **IPC_L0** e use as credenciais que lhe foram enviadas e escolha Login ({numref}`entrar`).
+Para seguir este exemplo, escolha o concurso **IP_L0** e use as suas credenciais e escolha Login ({numref}`entrar`).
 
 ```{figure} figures/fig3.png
 ---
@@ -62,7 +62,7 @@ name: pagina_submissão
 Página de submissão.
 ```
 
-No concurso **IPC_L0**, ao escolher o problema A verá a {numref}`problA`
+No concurso **IP_L0**, ao escolher o problema A verá a {numref}`problA`
 
 ```{figure} figures/fig5.png
 ---
@@ -104,4 +104,4 @@ name: resultado
 Resultado da submissão.
 ```
 
- 7. Para que uma submissão aceite seja pontuada, deve validar a solução com a Professora no prazo máximo de uma semana.
+ 7. Para que uma submissão aceite seja pontuada, deve validar a solução no prazo máximo de uma semana.

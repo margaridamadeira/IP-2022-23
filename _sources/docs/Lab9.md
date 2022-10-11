@@ -2,6 +2,8 @@
 
 Esta era a Festa de Janeiro prevista para o ano letivo de 2020-2021, que não aconteceu. 
 
+Submeta cada uma das tarefas ....
+
 <div style="page-break-after: always"></div>
 
 ## Eleições
@@ -101,7 +103,7 @@ Votos brancos,10
 Votos nulos,10
 ```
 
-Submeta na tarefa A no concurso IPC_L8.
+Submeta na tarefa A.
 
 ## Triângulo de Pascal
 
@@ -120,7 +122,7 @@ $$ C_{n,k} = \binom{n}{k} = \frac{n!}{k!(n-k)!}$$
 
 para $ n $ e $ k $ inteiros positivos e $ k \in [0, n] $.
 
-### Tarefa
+### Tarefa B
 
 Faça um programa que leia da consola um número inteiro $n$ e apresente os coeficientes para a expansão de um binómio de grau $n$.
 
@@ -157,7 +159,7 @@ O programa deverá apresentar na consola, numa mesma linha, os coeficientes sepa
 1 7 21 35 35 21 7 1
 ```
 
-Submeta na tarefa B no concurso IPC_L8.
+Submeta na tarefa B.
 
 ## Conjetura de Collatz
 
@@ -179,7 +181,7 @@ $$
 
 [Collatz](https://mathworld.wolfram.com/CollatzProblem.html) conjeturou se a aplicação sucessiva dessa função terminaria sempre com o valor de $1$ (um) para valores iniciais positivos.
 
-### Tarefa
+### Tarefa C
 
 Queremos testar a conjetura de Collatz, determinando ao fim de quantos passos se atinge o número $1$ (um) e qual o maior valor da sequência.
 
@@ -249,4 +251,4 @@ O programa deve apresentar na consola, numa mesma linha e separados pelo espaço
 5 16
 ```
 
-Submeta na tarefa C no concurso IPC_L8.
+Submeta na tarefa C. 
