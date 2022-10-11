@@ -22,7 +22,7 @@ Prepare um programa que apresente a mensagem "Hello world!" (sem as aspas).
 Hello world!
 ```
 
-Submeta no problema A do concurso IPC_L0.
+Submeta no problema A do concurso IP_L0.
 
 
 ### Resolução
@@ -39,7 +39,7 @@ Note que deve começar na primeira coluna, pois os espaços à esquerda têm sig
 
 Guarde o ficheiro que criou e execute-o. Se não estiver satisfeito com o resultado do seu programa, altere, grave e execute, até que esteja satisfeito.
 
-Passamos agora para a submissão do programa. Usando um *browser* à sua escolha, aceda ao [Mooshak](http://deei-mooshak.ualg.pt/~mmadeira). Entre, com as suas credenciais no concurso IPC_L0.
+Passamos agora para a submissão do programa. Usando um *browser* à sua escolha, aceda ao [Mooshak](http://deei-mooshak.ualg.pt/~mmadeira). Entre, com as suas credenciais no concurso IP_L0.
 
 Verifique que o problema selecionado é o que pretende, neste caso o A, e submeta o programa que preparou. 
 
@@ -67,7 +67,7 @@ Prepare um programa que leia uma distância em polegadas e apresente essa distâ
 25.4
 ```
 
-Submeta no problema B do concurso IPC_L0.
+Submeta no problema B do concurso IP_L0.
 
 
 

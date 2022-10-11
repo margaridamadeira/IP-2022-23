@@ -17,10 +17,6 @@ parts:
 #  - file: docs/ProgPython4
 #  - file: docs/Ficheiros
 #  - file: docs/MódulosTestes
-#  - file: docs/Matplotlib
-#  - file: docs/Numpy
-#  - file: docs/Biopython_introd
-#  - file: docs/Apresent_sympy
 - caption: "Guiões práticos"
   chapters:
   - file: docs/Primeiros_passos 
@@ -28,15 +24,15 @@ parts:
   - file: docs/Lab0
   - file: docs/Lab1
   - file: docs/Lab2
-#  - file: docs/Lab3
-#  - file: docs/Lab4
-#  - file: docs/Lab5
-#  - file: docs/Lab6
-#  - file: docs/F1-2021
-#  - file: docs/Lab7
-#  - file: docs/F2-2021
-#  - file: docs/Lab8
-#  - file: docs/Lab9
-#  - file: docs/F3-2122
+# - file: docs/Lab3
+# - file: docs/Lab4
+# - file: docs/Lab5
+# - file: docs/Lab6
+# - file: docs/F1-2021
+# - file: docs/Lab7
+# - file: docs/F2-2021
+# - file: docs/Lab8
+# - file: docs/Lab9
+# - file: docs/F3-2122
 
 
