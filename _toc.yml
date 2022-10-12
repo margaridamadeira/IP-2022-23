@@ -24,7 +24,7 @@ parts:
   - file: docs/Lab0
   - file: docs/Lab1
   - file: docs/Lab2
-# - file: docs/Lab3
+  - file: docs/Lab3
 # - file: docs/Lab4
 # - file: docs/Lab5
 # - file: docs/Lab6
