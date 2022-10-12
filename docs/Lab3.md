@@ -130,16 +130,17 @@ def test_intervalo_inteiros():
     y = int(input())
     valido = False
     # acrescente a validação
-    # # x tem que ser inferior a y
+    # x tem que ser inferior a y
     if (valido):
         pares_intervalo(x,y)
     else:
         print('Valores inválidos.')
 
 
-test_par()
-# test_intervalo_inteiros()
-
+if __name__ == '__main__':
+    test_par()
+    # test_intervalo_inteiros()
+    
 ```
 
 
