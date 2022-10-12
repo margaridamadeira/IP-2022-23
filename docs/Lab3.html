@@ -55,6 +55,7 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IP-2022-23/docs/Lab3.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Lab2" href="Lab2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -137,7 +138,7 @@
   Guiões práticos
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -161,6 +162,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Lab2.html">
    Lab2
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab3
   </a>
  </li>
 </ul>
@@ -411,16 +417,17 @@ a um pedido de cálculo ilegal.</p>
     <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
     <span class="n">valido</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="c1"># acrescente a validação</span>
-    <span class="c1"># # x tem que ser inferior a y</span>
+    <span class="c1"># x tem que ser inferior a y</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">valido</span><span class="p">):</span>
         <span class="n">pares_intervalo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valores inválidos.&#39;</span><span class="p">)</span>
 
 
-<span class="n">test_par</span><span class="p">()</span>
-<span class="c1"># test_intervalo_inteiros()</span>
-
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">test_par</span><span class="p">()</span>
+    <span class="c1"># test_intervalo_inteiros()</span>
+    
 </pre></div>
 </div>
 <p>Comece por completar a função <em>par</em>.</p>
@@ -572,7 +579,14 @@ a um pedido de cálculo ilegal.</p>
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Lab2.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Lab2</p>
+        </div>
+    </a>
 </div>
         
         </div>
