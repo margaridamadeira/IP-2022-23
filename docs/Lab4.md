@@ -60,15 +60,15 @@ Prepare um programa em Python que leia uma sequência de números, um por linha 
 12:15:35
 ```
 
-Submeta no problema B.
+Submeta no problema A.
 
-### Tarefa C
+### Tarefa B
 
 Atualizamos os equipamentos e agora os tempos de cada turno são apresentados em horas, minutos e segundos. Queremos saber o tempo total gasto nos turnos, em dias, horas, minutos e segundos.
 
 Podíamos converter os tempos para segundos e depois de termos um total, converter então para o formato desejado. Mas a nossa conversão não considerava a possibilidade de traduzir valores de horas superiores a 24 em dias e horas. Assim, vamos lendo a duração das experiências e atualizando o tempo total.
 
-Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos dados e apresente, para cada linha lida, o tempo acumulado em dias, horas, minutos e segundos. Cada linha contém uma string com o formato *HH:MM:SS* em que *HH* correponde às horas, *MM* corresponde aos minutos e *SS* aos segundos. O tempo total, que deve ser apresentado num única linha, deverá respeitar o formato "DD:HH:MM:SS" (sem as aspas), em que *DD*, *HH*, *MM* e *SS* correspondem ao valores de dias, horas, minutos e segundos, respetivamente. Note que deve usar dois dígitos para cada valor.
+Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos dados e apresente, para cada linha lida, o tempo acumulado em dias, horas, minutos e segundos. Cada linha contém uma string com o formato *HH:MM:SS* em que *HH* corresponde às horas, *MM* corresponde aos minutos e *SS* aos segundos. O tempo total, que deve ser apresentado num única linha, deverá respeitar o formato "DD:HH:MM:SS" (sem as aspas), em que *DD*, *HH*, *MM* e *SS* correspondem ao valores de dias, horas, minutos e segundos, respetivamente. Note que deve usar dois dígitos para cada valor.
 
 
 
@@ -104,9 +104,9 @@ Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos
 02:03:06:00
 ```
 
-Submeta no problema C.
+Submeta no problema B.
 
-### Tarefa D
+### Tarefa C
 
 Estamos a registar o trabalho e verificámos que muitas vezes há erros na introdução das datas. É preciso então validar as datas introduzidas. 
 
@@ -160,4 +160,4 @@ Cada linha do output repetirá o input acrescentando " -> Válida" (sem as aspas
 ```
 
 
-Submeta no problema D.
+Submeta no problema C.
