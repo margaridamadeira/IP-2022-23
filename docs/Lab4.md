@@ -1,5 +1,12 @@
 # Lab4
 
+Note bem:
+
++ Cotação deste guião: 2 pontos
++ Submeta cada uma das tarefas no problema correspondente do concurso IP_L4.
++ Prazo limite de submissão: 23h59m de 25 de outubro
++ Prazo limite de validação das submissões aceites: **31 de outubro**, horário de atendimento de segunda-feira (11h às 12h).
+
 ## Objetivos de aprendizagem
 
 Com este guião, exercitaremos:
