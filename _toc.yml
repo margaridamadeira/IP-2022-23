@@ -26,7 +26,7 @@ parts:
   - file: docs/Lab2
   - file: docs/Lab3
   - file: docs/Lab4
-# - file: docs/Lab5
+  - file: docs/Lab5
 # - file: docs/Lab6
 # - file: docs/F1-2021
 # - file: docs/Lab7
