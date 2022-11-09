@@ -4,8 +4,8 @@ Note bem:
 
 + Cotação deste guião: 2 pontos
 + Submeta cada uma das tarefas no problema correspondente do concurso IP_L4.
-+ Prazo limite de submissão: 23h59m de 25 de outubro
-+ Prazo limite de validação das submissões aceites: **31 de outubro**, horário de atendimento de segunda-feira (11h às 12h).
++ Novo prazo limite de submissão: 23h59m de 15 de novembro
++ Novo prazo limite de validação das submissões aceites: 21 de novembro, horário de atendimento de segunda-feira (9h às 11h).
 
 ## Objetivos de aprendizagem
 
@@ -69,6 +69,8 @@ Prepare um programa em Python que leia uma sequência de números, um por linha 
 
 Submeta no problema A.
 
+<div style="page-break-after: always"></div>
+
 ### Tarefa B
 
 Atualizamos os equipamentos e agora os tempos de cada turno são apresentados em horas, minutos e segundos. Queremos saber o tempo total gasto nos turnos, em dias, horas, minutos e segundos.
@@ -112,6 +114,8 @@ Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos
 ```
 
 Submeta no problema B.
+
+<div style="page-break-after: always"></div>
 
 ### Tarefa C
 

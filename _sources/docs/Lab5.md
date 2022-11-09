@@ -1,340 +1,149 @@
 # Lab5
 
+Note bem:
+
++ Cotação deste guião: 2 pontos
++ Submeta cada uma das tarefas no problema correspondente do concurso IP_L5.
++ Prazo limite de submissão: 23h59m de 15 de novembro
++ Prazo limite de validação das submissões aceites: 21 de novembro, horário de atendimento de segunda-feira (9h às 11h).
+
 ## Objetivos de aprendizagem
 
 Com este guião, exercitaremos:
 
-1. a leitura da consola, vários valores por linha e até ao fim dos dados
-1. escrita formatada
-1. a utilização de listas
+1. o desenvolvimento de uma solução completa
+1. o uso de condições lógicas na implementação de soluções computacionais
+1. o uso dos métodos intrínsecos dos tipos de dados.
 
-## Enunciado
+## IMI
 
-Submeta cada uma das tarefas no problema correspondente do concurso IP_L5.
+(baseado num exercício do Prof. Doutor Tiago Candeias, IP (MAEG))
 
+O IMI é o imposto sobre o património imobiliário. Todos os proprietários de imóveis têm que pagar este imposto anualmente. Este imposto incide sobre o valor do imóvel e a taxa mínima é de 0.3%. Por exemplo, um apartamento cujo valor seja 100000 euros pagará 300 euros.
+
+Pretende-se determinar o montante a pagar caso se adote uma política que atribua um desconto no IMI, para beneficiar as famílias com filhos. O desconto seria de 10% no caso de um filho, 15% no caso de 2 filhos e 20% no caso de 3 filhos ou mais. No entanto, o desconto nunca seria superior a 80 euros.
 
 ### Tarefa A
 
-Pretende-se a ordenação crescente de sequências de números. Não sabemos quantas sequências temos nem quantos elementos por sequência. Para cada linha lida, ordenamos os elementos e apresentamos a sequência ordenada.
+Programe uma função `desconto_imi` com dois argumentos, o primeiro de tipo float, representando o valor do imóvel, e o segundo, de tipo int, representando o número de filhos; essa função calculará o valor do imi a pagar.
 
-Vamos então preparar um programa que receba da consola, até ao fim dos dados, linhas com sequências de inteiros e, para cada linha, apresente a sequência por ordem crescente, com cada elemento separado por um espaço. 
+Prepare um programa em Python completo, incluindo uma função de teste, que leia da consola uma linha com o valor do imóvel e o número de filhos e apresente o valor a pagar.
 
-Porque queremos um programa "completo", começamos pelas linhas que indicam ao Python que deve começar pela função de teste, ou seja
-
-```
-test_ordem_crescente()
-```
-
-Em seguida, sabemos que precisaremos da função de  *test_ordem_crescente*, responsável pela leitura, da função *ordem_crescente* e de uma função para apresentação dos resultados, seja *mostra_sequência_separada_por_espaços*. 
-Mantemos as funções vazias (*pass* para indicar que não há nada a fazer).
-
-
-O esboço do nosso programa fica assim:
-
-```
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-"""Resolução guiada
-L4 - A
-Programa que recebe da consola, até ao fim dos dados, 
-linhas com sequências de inteiros e, 
-para cada linha, apresenta a sequência por ordem crescente, 
-com cada elemento separado por um espaço.
-
-"""
-
-
-def ordem_crescente():
-    """Ordena uma sequência de números inteiros"""
-    pass
-
-def mostra_sequência_separada_por_espaços():
-    """Apresenta os números inteiros separados por espaço"""
-    pass
-
-def test_ordem_crescente():
-    """Lê várias linhas e, para cada linha lida, manda ordenar e mostrar."""
-    pass  
-
-test_ordem_crescente()
-```
-
-Usamos a abordagem apresentada para a {ref}`Leitura`.
-Começamos por passar cada linha para uma lista e, para verificar, usamos uma primeira versão da função *mostra_sequência_separada_por_espaços*, que apresenta a lista ainda não formatada.
-
-Usamos também algo que nos ajuda quando as funções começam a ser muitas: identificamos os tipos de dados, para que fique claro como estamos a organizar as atividades do programa. E depois a ajuda em linha também apresenta essa informação. Isto é opcional e apenas indicativo, o Python não vai verificar se os argumentos usados na chamada da função são ou não do tipo sugerido.
-
-
-O nosso programa ficaria então assim:
-
-```
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-"""Resolução guiada
-L4 - A
-Programa que recebe da consola, até ao fim dos dados, 
-linhas com sequências de inteiros e, 
-para cada linha, apresenta a sequência por ordem crescente, 
-com cada elemento separado por um espaço.
-
-"""
-import sys
-
-def ordem_crescente(a: list) -> list:
-    """Ordena uma sequência de números inteiros"""
-    pass
-
-def mostra_sequência_separada_por_espaços(a: list) -> None:
-    """
-    Função que apresenta uma lista, cada elemento separado por espaço.
-    """
-    print(a)
-
-def test_ordem_crescente():
-    """Lê várias linhas e, para cada linha lida, manda ordenar e mostrar."""
-    while True:
-        try:
-            linha = input().split()
-        except (EOFError, KeyboardInterrupt):
-            sys.exit(0)
-        if linha:
-            mostra_sequência_separada_por_espaços(linha)
-        else:
-            sys.exit(0)
-
-    
-
-test_ordem_crescente()
-
-```
-
-
-Com o nosso código num ficheiro chamado *ordenar_lista.py*, experimentamos.
-
-```
-python ordenar_lista.py 
-1 4 7 3 6 2
-['1', '4', '7', '3', '6', '2']
-```
-
-O resultado ainda não é exatamente o que pretendíamos.
-
-Em primeiro lugar, a lista devia ser de inteiros. Há que converter! Podemos conseguir isso alterando o bloco do *try* para
-
-```
-            linha = input().split()
-            lista = [int(x) for x in linha]
-```
-
-e, claro, revendo as utilizações da lista *linha*.
-
-
-Em segundo lugar, era pedido que entre cada dois elementos existisse um espaço.
-Aliás, deve haver um espaço entre cada dois elementos, mas não pode haver um espaço antes do primeiro elemento nem um espaço depois do último.
-
-A nossa função *mostra_sequência_separada_por_espaços* poderia ficar assim, criando a string de saída e depois apresentando-a.
-
-```
-def mostra_sequência_separada_por_espaços(a: list) -> None:
-    """
-    Função que apresenta uma lista, cada elemento separado por espaços.
-    """
-    resultado = ''
-    for i in a: 
-        if len(resultado) == 0:
-            resultado = str(i)
-        else:
-            resultado = resultado + ' ' + str(i)
-    print(resultado)
-```
-
-Experimentemos outra vez. Deveremos ver o que introduzimos.
-
-Ora o que falta agora é a ordenação da lista. O Python tem essa função mas há que ter cuidado pois essa função altera a lista original. Complete agora a função *ordem_crescente* para a ordenação crescente dos elementos inteiros de uma lista, inclua a chamada na função *test_ordem_crescente* e teste.
-
-
-#### Casos de teste 
+**Casos de teste**
 
 **Input 1**
 
 ```
-2 9 1 8 6
-
+100000 0
 ```
 
 **Output 1**
 
 ```
-1 2 6 8 9
+300.0
 ```
 
 **Input 2**
 
 ```
-1 4 7 3 6 2
-34 27 39 6 2 100
-5 -5 10 -10 -50 250
-
-
+100000 1
 ```
 
 **Output 2**
 
 ```
-1 2 3 4 6 7
-2 6 27 34 39 100
--50 -10 -5 5 10 250
+270.0
 ```
-
-Submeta no problema A.
-
-### Tarefa B
-
-Fizemos uma série de experiências e a duração foi cronometrada de forma automática, em segundos. Queremos saber a duração de cada experiência em horas, minutos e segundos.
-
-Prepare um programa em Python que leia uma sequência de números, um por linha e, para cada número lido, apresente esse valor no formato HH:MM:SS.
-
-#### Casos de teste 
-
-**Input 1**
-
-```
-7505
-```
-
-**Output 1**
-
-```
-02:05:05
-```
-
-**Input 2**
-
-```
-44135
-```
-
-**Output 2**
-
-```
-12:15:35
-```
-
 
 **Input 3**
 
 ```
-7505
-44135
+500000 0
 ```
 
 **Output 3**
 
 ```
-02:05:05
-12:15:35
+1500.0
 ```
 
-Submeta no problema B.
+**Input 4**
 
-### Tarefa C
+```
+500000 1
+```
 
-Atualizamos os equipamentos e agora os tempos das experiências são apresentados em horas, minutos e segundos. Queremos saber o tempo total gasto nas experiências, em dias, horas, minutos e segundos.
+**Output 4**
 
-Podíamos converter os tempos para segundos e depois de termos um total, converter então para o formato desejado. Mas a nossa conversão não considerava a possibilidade de traduzir valores de horas superiores a 24 em dias e horas. Assim, vamos lendo a duração das experiências e atualizando o tempo total.
+```
+1420.0
+```
 
-Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos dados e apresente, para cada linha lida, o tempo acumulado em dias, horas, minutos e segundos. Cada linha contém uma string com o formato *HH:MM:SS* em que *HH* correponde às horas, *MM* corresponde aos minutos e *SS* aos segundos. O tempo total, que deve ser apresentado num única linha, deverá respeitar o formato "DD:HH:MM:SS" (sem as aspas), em que *DD*, *HH*, *MM* e *SS* correspondem ao valores de dias, horas, minutos e segundos, respetivamente. Note que deve usar dois dígitos para cada valor.
+Submeta na tarefa A.
+
+<div style="page-break-after: always"></div>
+
+## Gerar senhas
 
 
+```{figure} ./figures/codigos.png
+---
+height: 200px
+name: p4assw0rd
+---
 
-#### Casos de teste 
+Password secreta
+```
+
+Isto de inventar senhas, todas diferentes, tem muito que se lhe diga. Vou passar a criar uma senha a partir de uma frase, idealmente associada ao serviço onde me quero autenticar.
+
+Vou passar a adotar uma estratégia que passa por aplicar sequencialmente cada uma das seguintes três transformações: em cada palavra (ou sequência separada por espaços), se o primeiro carater for uma letra, converto-a para maiúscula e converto as demais letras para minúsculas; substituo todas as ocorrências de 'a', 'e', 'i' e 'o' por '4', '3', '1' e '0', respetivamente; como muitas vezes são pedidos sinais de pontuação, então se a soma dos digitos numéricos for par, junto um ponto final ('.') e se for ímpar, junto um ponto de exclamação ('!).
+
+Agora só preciso de um programa para converter as frases para quando precisar das senhas.
+
+### Tarefa B
+
+Prepare um programa em Python que leia da consola uma frase e apresente a frase original e a senha correspondente de acordo com a estratégia apresentada.
+
+O input é uma única linha contendo uma string.
+O output é uma única linha contendo a string lida e a string resultante da codificação, separadas pela sequência espaço, dois pontos, espaço (ou seja, " : " (sem as aspas)).
+
+**Casos de teste**
 
 **Input 1**
 
 ```
-02:05:05
+segredo meu e MUITO meu
 ```
 
 **Output 1**
 
 ```
-00:02:05:05
+segredo meu e MUITO meu : S3gr3d0 M3u E Mu1t0 M3u!
 ```
 
 **Input 2**
 
 ```
-02:05:05
-12:15:35
-24:00:00
-12:45:20
+o carteiro toca sempre duas vezes
 ```
 
 **Output 2**
 
 ```
-00:02:05:05
-00:14:20:40
-01:14:20:40
-02:03:06:00
+o carteiro toca sempre duas vezes : O C4rt31r0 T0c4 S3mpr3 Du4s V3z3s.
 ```
 
-Submeta no problema C.
-
-### Tarefa D
-
-Estamos a registar o trabalho e verificámos que muitas vezes há erros na introdução das datas. É preciso então validar as datas introduzidas. 
-
-Usamos o [formato padrão](https://pt.wikipedia.org/wiki/ISO_8601), *YYYY-MM-DD* em que *YYYY* representa o ano, *MM* representa o mês e *DD* o dia. Para simplificar, vamos considerar o [calendário gregoriano](https://pt.wikipedia.org/wiki/Ano_bissexto), ou seja, que temos datas a partir de 1582.
-
-Relembremos agora as regras para as datas. Os meses são 12, isso é simples. Os dias variam, como sabemos do ditado popular: "Trinta dias tem novembro, abril, junho e setembro, vinte e oito terá um e os mais têm trinta e um". Fevereiro terá 28 dias, ou, num ano bissexto, 29. Um ano bissexto é divisível por quatro mas, se for um ano secular só será bissexto se for divisível por 400. E um ano secular é um ano divisível por 100.
-
-Prepare um programa que leia as datas da consola, uma por linha, até ao fim dos dados. Por cada linha lida, o seu programa deve repetir a data lida, indicando se é válida ou não. Cada linha do input conterá *YYYY-MM-DD* em que *YYYY*, *MM* e *DD* são inteiros maiores que zero e representam ano, mês e dia, respetivamente. 
-Cada linha do output repetirá o input acrescentando " -> Válida" (sem as aspas) ou " -> Inválida" (sem as aspas), se a data for válida ou não, respetivamente. 
-
-#### Casos de teste
-
-**Input 1**
+**Input 3**
 
 ```
-2020-03-31
-2020-03-45
-2020-04-30
-2020-04-31
-2020-04-45
-2019-02-28
-2019-02-29
-1600-02-29
-1700-02-29
-1800-02-29
-1900-02-29
-2000-02-29
-2019-02-29
-2020-02-29
-2020-02-30
+conta da Univ do Algarve
 ```
 
-**Output 1**
+**Output 3**
 
 ```
-2020:03:31 -> Válida
-2020:03:45 -> Inválida
-2020:04:30 -> Válida
-2020:04:31 -> Inválida
-2020:04:45 -> Inválida
-2019:02:28 -> Válida
-2019:02:29 -> Inválida
-1600:02:29 -> Válida
-1700:02:29 -> Inválida
-1800:02:29 -> Inválida
-1900:02:29 -> Inválida
-2000:02:29 -> Válida
-2019:02:29 -> Inválida
-2020:02:29 -> Válida
-2020:02:30 -> Inválida
+conta da Univ do Algarve : C0nt4 D4 Un1v D0 Alg4rv3.
 ```
 
-
-Submeta no problema D.
+Submeta na tarefa B.
