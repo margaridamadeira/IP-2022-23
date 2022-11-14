@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programação em Python - parte 3 &#8212; Introdução à programação</title>
+    <title>Listas, leitura e escrita &#8212; Introdução à programação</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -136,7 +136,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Programação em Python - parte 3
+   Listas, leitura e escrita
   </a>
  </li>
 </ul>
@@ -351,8 +351,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="programacao-em-python-parte-3">
-<h1>Programação em Python - parte 3<a class="headerlink" href="#programacao-em-python-parte-3" title="Link permanente para este título">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="listas-leitura-e-escrita">
+<h1>Listas, leitura e escrita<a class="headerlink" href="#listas-leitura-e-escrita" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
 <p>Com esta lição saberemos:</p>
@@ -596,8 +596,9 @@ a
 </div>
 </div>
 </div>
-<p>Mas atenção: tenho que usar <strong>.copy</strong>.
+<p>Mas atenção: tenho que usar <strong>.copy()</strong>.
 Se tivesse apenas criado uma nova variável, estava a falar da mesma lista.</p>
+<p>Verificando:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primos_até_10_invertido</span> <span class="o">=</span> <span class="n">primos_até_10</span> <span class="c1"># sem o copy</span>
@@ -834,10 +835,7 @@ Experimente, no Spyder, fazer</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 1 2 3 4
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 5 6 7 8 9 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 1 2 3 4 5 6 7 8 9 
 </pre></div>
 </div>
 </div>
