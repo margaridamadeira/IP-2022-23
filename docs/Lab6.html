@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab6 &#8212; Introdução à programação</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,7 +44,7 @@
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
@@ -56,8 +56,12 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IP-2022-23/docs/Lab6.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Introdução à programação" href="F1-2022.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -96,7 +100,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preâmbulo
  </span>
@@ -108,7 +112,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Resumos dos temas
  </span>
@@ -139,13 +143,18 @@
    Listas, leitura e escrita
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M%C3%B3dulosTestes.html">
+   Criação de soluções
+  </a>
+ </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Guiões práticos
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -189,6 +198,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="F1-2022.html">
    Introdução à programação
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab6
   </a>
  </li>
 </ul>
@@ -263,8 +277,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imc">
-   IMC
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pluviosidade">
+   Pluviosidade
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -275,14 +294,21 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pluviosidade">
-   Pluviosidade
+  <a class="reference internal nav-link" href="#temperatura">
+   Temperatura
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tarefa-b">
      Tarefa B
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exemplo">
+       Exemplo
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -311,80 +337,37 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lab6">
 <h1>Lab6<a class="headerlink" href="#lab6" title="Link permanente para este título">¶</a></h1>
-<p>Esta foi a primeira festa do ano letivo de 2020-2021.</p>
-<p>Com este este exercício, exercitaremos uma festa de programação.
-Reveja a <a class="reference external" href="https://tutoria.ualg.pt/2021/mod/resource/view.php?id=37418">Informação sobre as Festas de Programação</a>.
-Idealmente, reserve três horas e tente resolver os exercícios da festa de forma contínua.</p>
-<p>Antes disso, reúna todos os seus materiais para consulta durante a festa e os seus programas anteriores (os que estão no Mooshak pode sempre ir lá buscá-los). Prepare uma pasta para cada problema que vai abordar, e a versão inicial da sua resolução.</p>
-<p>Submeta cada uma das tarefas no problema correspondente do concurso IP_Lx.</p>
-<div class="section" id="imc">
-<h2>IMC<a class="headerlink" href="#imc" title="Link permanente para este título">¶</a></h2>
-<div class="figure align-default" id="laurelhardy">
-<a class="reference internal image-reference" href="../_images/Laurel_and_Hardy_Silhouette.jpg"><img alt="../_images/Laurel_and_Hardy_Silhouette.jpg" src="../_images/Laurel_and_Hardy_Silhouette.jpg" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://commons.wikimedia.org/wiki/File:Laurel_and_Hardy_Silhouette.jpg">Laurel and Hardy Silhouette</a>, de Cls14 em English Wikipedia, Public domain, via Wikimedia Commons.</span><a class="headerlink" href="#laurelhardy" title="Permalink to this image">¶</a></p>
-</div>
-<p>Foi noticiado em Março de 2020 que a <a class="reference external" href="https://news.un.org/pt/story/2020/03/1706141">OMS aponta Portugal como referência para prevenir obesidade nas crianças</a>.</p>
-<p>Manter um peso saudável é muito importante. A <a class="reference external" href="http://www.fpcardiologia.pt/saude-do-coracao/factores-de-risco/obesidade/">Fundação Portuguesa de Cardiologia</a> refere que a obesidade afeta a longevidade e a qualidade de vida e indica como calcular o índice de massa corporal (IMC) e até como classificar o peso de um indivíduo.</p>
-<p>Sabemos que <span class="math notranslate nohighlight">\(IMC = \frac{peso}{altura^2}\)</span> e que os valores normais estão entre <span class="math notranslate nohighlight">\(18.5\)</span> e <span class="math notranslate nohighlight">\(24.9\)</span>.</p>
-<p>Para ajudar, vamos preparar um programa que, a partir do peso e da altura, apresente o IMC.</p>
-<div class="section" id="tarefa-a">
-<h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
-<p>Prepare um programa em Python que receba o peso e altura de uma pessoa e apresente o índice de massa corporal (IMC). O índice de massa corporal, em <span class="math notranslate nohighlight">\(kg / m^2\)</span>, calcula-se dividindo o peso pelo quadrado da altura.</p>
-<p>O input é uma única linha contendo dois números reais separados pelo caráter espaço e que correspondem ao peso e altura.
-O output é um número real, com três casas decimais, que corresponde ao valor do índice de massa corporal.
-Se o peso ou altura não forem maiores que zero, o programa deverá produzir a mensagem «Dados inválidos.» (sem as aspas).</p>
-<p><strong>Casos de teste</strong></p>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">50.0</span> <span class="mf">1.50</span>
-</pre></div>
-</div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">22.222</span>
-</pre></div>
-</div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">45.0</span> <span class="mf">1.50</span>
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">20.000</span>
-</pre></div>
-</div>
-<p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">45</span> <span class="mf">1.50</span>
-</pre></div>
-</div>
-<p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dados</span> <span class="n">inválidos</span><span class="o">.</span>
-</pre></div>
-</div>
-<p><strong>Input 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">45</span> <span class="mi">0</span>
-
-</pre></div>
-</div>
-<p><strong>Output 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dados</span> <span class="n">inválidos</span><span class="o">.</span>
-</pre></div>
-</div>
-<p>Submeta na tarefa A do concurso IPC_L5.</p>
-<div style="page-break-after: always"></div>
-</div>
+<p>Note bem:</p>
+<ul class="simple">
+<li><p>Cotação deste guião: 2 pontos</p></li>
+<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IP_L6.</p></li>
+<li><p>Prazo limite de submissão: 23h59m de 29 de novembro</p></li>
+<li><p>Prazo limite de validação das submissões aceites: 5 de dezembro, horário de atendimento de segunda-feira (9h às 11h).</p></li>
+</ul>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
+<p>Com este guião, exercitaremos:</p>
+<ol class="simple">
+<li><p>o desenvolvimento de uma solução completa</p></li>
+<li><p>o uso de string e listas</p></li>
+<li><p>a técnica <em>count-while</em></p></li>
+</ol>
 </div>
 <div class="section" id="pluviosidade">
 <h2>Pluviosidade<a class="headerlink" href="#pluviosidade" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="chuva">
 <a class="reference internal image-reference" href="../_images/chuva-pexels-pixabay-459451.jpg"><img alt="../_images/chuva-pexels-pixabay-459451.jpg" src="../_images/chuva-pexels-pixabay-459451.jpg" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.pexels.com/photo/rain-drops-459451/">Chuva</a>, de Pixabay em <a class="reference external" href="https://www.pexels.com/">Pexels</a>, CC0.</span><a class="headerlink" href="#chuva" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text"><a class="reference external" href="https://www.pexels.com/photo/rain-drops-459451/">Chuva</a>, de Pixabay em <a class="reference external" href="https://www.pexels.com/">Pexels</a>, CC0.</span><a class="headerlink" href="#chuva" title="Permalink to this image">¶</a></p>
 </div>
 <p>Temos tido alguma chuva ultimamente, mas pouco chove no Algarve. O <a class="reference external" href="https://snirh.apambiente.pt/">Sistema Nacional de Informação de Recursos Hídricos</a> disponibiliza, entre outros dados, os valores diários da precipitação.</p>
-<p>Vamos querer alguns valores estatísticos pelo que, para testar o programa, fomos <a class="reference external" href="https://snirh.apambiente.pt/snirh/_dadosbase/site/janela_verdados.php?sites=920685102&amp;pars=413026594&amp;tmin=01/01/2020&amp;tmax=30/09/2021">buscar</a> os valores de precipitação diária da estação de Barranco do Velho desde o início do ano. Retirámos a informação que não precisávamos e ficámos apenas com os valores da precipitação: em cada dia, numa linha, um valor real.</p>
+<p>Vamos querer alguns valores estatísticos pelo que, para testar o programa, fomos buscar os valores de precipitação diária de uma estação meteorológica desde o início do ano. Retirámos a informação que não precisávamos e ficámos apenas com os valores da precipitação: em cada dia, numa linha, um valor real.</p>
 <p>Queremos saber qual o valor da precipitação acumulada, qual o maior valor de precipitação diária e em quantos dias choveu.</p>
-<div class="section" id="tarefa-b">
-<h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h3>
+<div class="section" id="tarefa-a">
+<h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
 <p>Prepare um programa em Python que leia da consola, até ao fim do input, uma sequência de números e apresente a soma dos valores lidos, o maior valor e o número de dias em que choveu (ou seja, o valor da precipitação é maior que zero).</p>
 <p>O programa lerá tantas linhas quantos os dias contidos no registo. Em cada linha haverá um número (inteiro ou real) correspondente à precipitação num dia. Quando não choveu, o valor da precipitação é 0 (zero).
 Ao terminar a leitura, o programa escreverá na mesma linha três valores separados por espaços. Os primeiros dois valores, em notação científica, correspondem à soma dos valores lidos e ao maior valor registado; o terceiro valor é um número inteiro que indica quantos dias choveu.</p>
+<p><em>Requisito técnico</em>: deve ler os valores para uma lista.</p>
 <p><strong>Casos de teste</strong></p>
 <p><strong>Input 1</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.1</span>
@@ -447,15 +430,84 @@ Ao terminar a leitura, o programa escreverá na mesma linha três valores separa
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.950000e+01</span> <span class="mf">2.020000e+01</span> <span class="mi">11</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa B do concurso IPC_Lab5.</p>
+<p>Submeta na tarefa A.</p>
 <div style="page-break-after: always"></div>
+</div>
+</div>
+<div class="section" id="temperatura">
+<h2>Temperatura<a class="headerlink" href="#temperatura" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="subida-de-temperatura">
+<a class="reference internal image-reference" href="../_images/subida-temperatura.jpeg"><img alt="../_images/subida-temperatura.jpeg" src="../_images/subida-temperatura.jpeg" style="height: 300px;" /></a>
+</div>
+<p>Porque a definição dos valores de referência no ar condicionado tem impacto no uso de energia passámos a recolher a temperatura de hora a hora.
+Houve alturas em que se verificou uma sequência crescente, ou seja, um conjunto de medidas T em que <span class="math notranslate nohighlight">\(t_n &lt; t_{n+1}\)</span>.
+Para analisarmos a evolução das temperaturas, queremos identificar a maior amplitude das sequências crescentes de temperatura.</p>
+<div class="section" id="tarefa-b">
+<h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h3>
+<p>Dada uma série de medidas de temperatura, pretende-se identificar qual a maior amplitude das sequências crescentes de temperatura.</p>
+<p>O seu programa deve ler, da consola, uma única linha contendo números reais separados por espaços.</p>
+<p>O programa deve apresentar um número real com 4 casas decimais que corresponde à maior amplitude das sequências crescentes.</p>
+<div class="section" id="exemplo">
+<h4>Exemplo<a class="headerlink" href="#exemplo" title="Link permanente para este título">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">26.79</span> <span class="mf">26.76</span> <span class="mf">26.62</span> <span class="mf">26.12</span> <span class="mf">25.47</span> <span class="mf">30.12</span> <span class="mf">30.18</span> <span class="mf">30.65</span> <span class="mf">32.07</span> <span class="mf">32.13</span> <span class="mf">33.17</span> <span class="mf">32.83</span> <span class="mf">32.89</span> <span class="mf">35.47</span> <span class="mf">35.91</span> <span class="mf">37.34</span> <span class="mf">37.62</span> <span class="mf">36.89</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">7.7000</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
+
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.0000</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.0</span> <span class="mf">27.0</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">27.0000</span>
+</pre></div>
+</div>
+<p><strong>Input 4</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">27.0</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
+<p><strong>Output 4</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.0000</span>
+</pre></div>
+</div>
+<p><strong>Input 5</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span> <span class="o">-</span><span class="mi">5</span> <span class="o">-</span><span class="mi">4</span> <span class="o">-</span><span class="mi">3</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">22</span> <span class="mi">27</span> <span class="mi">0</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span>
+</pre></div>
+</div>
+<p><strong>Output 5</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">32.0000</span>
+</pre></div>
+</div>
+<p><strong>Input 6</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="o">-</span><span class="mi">5</span> <span class="o">-</span><span class="mi">4</span> <span class="o">-</span><span class="mi">3</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">22</span> <span class="mi">27</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p><strong>Output 6</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">32.0000</span>
+</pre></div>
+</div>
+<p>Submeta na tarefa B.</p>
+<div style="page-break-after: always"></div>
+</div>
 </div>
 </div>
 <div class="section" id="quimica-a-toa">
 <h2>Química à toa<a class="headerlink" href="#quimica-a-toa" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="tabela-periodica">
 <a class="reference internal image-reference" href="../_images/tp-ualg.jpeg"><img alt="../_images/tp-ualg.jpeg" src="../_images/tp-ualg.jpeg" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://ualg.pt/pt/content/exposicao-desafios-da-tabela-periodica-pode-ser-visitada-na-biblioteca-da-ualg">Exposição “Desafios da Tabela Periódica”, na Biblioteca da UAlg</a></span><a class="headerlink" href="#tabela-periodica" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text"><a class="reference external" href="https://ualg.pt/pt/content/exposicao-desafios-da-tabela-periodica-pode-ser-visitada-na-biblioteca-da-ualg">Exposição “Desafios da Tabela Periódica”, na Biblioteca da UAlg</a></span><a class="headerlink" href="#tabela-periodica" title="Permalink to this image">¶</a></p>
 </div>
 <p>Fonte: <a class="reference external" href="https://eventos.fct.unl.pt/sites/default/files/topas-lx/files/problemas_topaslx_2016.pdf">Problema C do ToPAS 2016</a></p>
 <p>Quando o Rui estava a estudar Química, escrevendo fórmulas
@@ -511,7 +563,7 @@ elementos têm de aparecer pela ordem em que ocorrem na fórmula.</p>
 <span class="n">Uus</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa C do concurso IPC_L5.</p>
+<p>Submeta na tarefa C.</p>
 </div>
 </div>
 </div>
@@ -539,13 +591,15 @@ elementos têm de aparecer pela ordem em que ocorrem na fórmula.</p>
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="F1-2022.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Introdução à programação</p>
+        </div>
+    </a>
 </div>
         
         </div>
@@ -566,8 +620,7 @@ elementos têm de aparecer pela ordem em que ocorrem na fórmula.</p>
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

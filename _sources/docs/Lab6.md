@@ -1,98 +1,21 @@
 # Lab6
 
 
-Esta foi a primeira festa do ano letivo de 2020-2021.
+Note bem:
 
-Com este este exercício, exercitaremos uma festa de programação. 
-Reveja a [Informação sobre as Festas de Programação](https://tutoria.ualg.pt/2021/mod/resource/view.php?id=37418).
-Idealmente, reserve três horas e tente resolver os exercícios da festa de forma contínua.
++ Cotação deste guião: 2 pontos
++ Submeta cada uma das tarefas no problema correspondente do concurso IP_L6.
++ Prazo limite de submissão: 23h59m de 29 de novembro
++ Prazo limite de validação das submissões aceites: 5 de dezembro, horário de atendimento de segunda-feira (9h às 11h).
 
-Antes disso, reúna todos os seus materiais para consulta durante a festa e os seus programas anteriores (os que estão no Mooshak pode sempre ir lá buscá-los). Prepare uma pasta para cada problema que vai abordar, e a versão inicial da sua resolução.
+## Objetivos de aprendizagem
 
-Submeta cada uma das tarefas no problema correspondente do concurso IP_Lx.
+Com este guião, exercitaremos:
 
-## IMC
+1. o desenvolvimento de uma solução completa
+1. o uso de string e listas 
+1. a técnica *count-while* 
 
-```{figure} ./figures/Laurel_and_Hardy_Silhouette.jpg
----
-height: 300px
-name: LaurelHardy
----
-[Laurel and Hardy Silhouette](https://commons.wikimedia.org/wiki/File:Laurel_and_Hardy_Silhouette.jpg), de Cls14 em English Wikipedia, Public domain, via Wikimedia Commons.
-```
-
-Foi noticiado em Março de 2020 que a [OMS aponta Portugal como referência para prevenir obesidade nas crianças](https://news.un.org/pt/story/2020/03/1706141).
-
-Manter um peso saudável é muito importante. A [Fundação Portuguesa de Cardiologia](http://www.fpcardiologia.pt/saude-do-coracao/factores-de-risco/obesidade/) refere que a obesidade afeta a longevidade e a qualidade de vida e indica como calcular o índice de massa corporal (IMC) e até como classificar o peso de um indivíduo.
-
-Sabemos que $IMC = \frac{peso}{altura^2}$ e que os valores normais estão entre $18.5$ e $24.9$.
-
-Para ajudar, vamos preparar um programa que, a partir do peso e da altura, apresente o IMC.
-
-### Tarefa A
-
-Prepare um programa em Python que receba o peso e altura de uma pessoa e apresente o índice de massa corporal (IMC). O índice de massa corporal, em $kg / m^2$, calcula-se dividindo o peso pelo quadrado da altura.
-
-O input é uma única linha contendo dois números reais separados pelo caráter espaço e que correspondem ao peso e altura. 
-O output é um número real, com três casas decimais, que corresponde ao valor do índice de massa corporal.
-Se o peso ou altura não forem maiores que zero, o programa deverá produzir a mensagem "Dados inválidos." (sem as aspas).
-
-
-
-**Casos de teste**
-
-**Input 1**
-
-```
-50.0 1.50
-```
-
-**Output 1**
-
-```
-22.222
-```
-
-**Input 2**
-
-```
-45.0 1.50
-```
-
-**Output 2**
-
-```
-20.000
-```
-
-**Input 3**
-
-```
--45 1.50
-```
-
-**Output 3**
-
-```
-Dados inválidos.
-```
-
-**Input 4**
-
-```
-45 0
-
-```
-
-**Output 4**
-
-```
-Dados inválidos.
-```
-
-Submeta na tarefa A do concurso IPC_L5.
-
-<div style="page-break-after: always"></div>
 
 ## Pluviosidade
 
@@ -108,16 +31,18 @@ name: chuva
 
 Temos tido alguma chuva ultimamente, mas pouco chove no Algarve. O [Sistema Nacional de Informação de Recursos Hídricos](https://snirh.apambiente.pt/) disponibiliza, entre outros dados, os valores diários da precipitação.
 
-Vamos querer alguns valores estatísticos pelo que, para testar o programa, fomos [buscar](https://snirh.apambiente.pt/snirh/_dadosbase/site/janela_verdados.php?sites=920685102&pars=413026594&tmin=01/01/2020&tmax=30/09/2021) os valores de precipitação diária da estação de Barranco do Velho desde o início do ano. Retirámos a informação que não precisávamos e ficámos apenas com os valores da precipitação: em cada dia, numa linha, um valor real. 
+Vamos querer alguns valores estatísticos pelo que, para testar o programa, fomos buscar os valores de precipitação diária de uma estação meteorológica desde o início do ano. Retirámos a informação que não precisávamos e ficámos apenas com os valores da precipitação: em cada dia, numa linha, um valor real. 
 
 Queremos saber qual o valor da precipitação acumulada, qual o maior valor de precipitação diária e em quantos dias choveu.
 
-### Tarefa B
+### Tarefa A
 
 Prepare um programa em Python que leia da consola, até ao fim do input, uma sequência de números e apresente a soma dos valores lidos, o maior valor e o número de dias em que choveu (ou seja, o valor da precipitação é maior que zero).
 
 O programa lerá tantas linhas quantos os dias contidos no registo. Em cada linha haverá um número (inteiro ou real) correspondente à precipitação num dia. Quando não choveu, o valor da precipitação é 0 (zero).
 Ao terminar a leitura, o programa escreverá na mesma linha três valores separados por espaços. Os primeiros dois valores, em notação científica, correspondem à soma dos valores lidos e ao maior valor registado; o terceiro valor é um número inteiro que indica quantos dias choveu. 
+
+*Requisito técnico*: deve ler os valores para uma lista.
 
 **Casos de teste**
 
@@ -194,7 +119,108 @@ Ao terminar a leitura, o programa escreverá na mesma linha três valores separa
 3.950000e+01 2.020000e+01 11
 ```
 
-Submeta na tarefa B do concurso IPC_Lab5.
+Submeta na tarefa A.
+
+<div style="page-break-after: always"></div>
+
+## Temperatura
+
+
+```{figure} ./figures/subida-temperatura.jpeg
+---
+height: 300px
+name: Subida de temperatura
+---
+```
+Porque a definição dos valores de referência no ar condicionado tem impacto no uso de energia passámos a recolher a temperatura de hora a hora.
+Houve alturas em que se verificou uma sequência crescente, ou seja, um conjunto de medidas T em que $t_n < t_{n+1}$.
+Para analisarmos a evolução das temperaturas, queremos identificar a maior amplitude das sequências crescentes de temperatura.
+
+### Tarefa B
+
+Dada uma série de medidas de temperatura, pretende-se identificar qual a maior amplitude das sequências crescentes de temperatura. 
+
+O seu programa deve ler, da consola, uma única linha contendo números reais separados por espaços.
+
+O programa deve apresentar um número real com 4 casas decimais que corresponde à maior amplitude das sequências crescentes.
+
+
+#### Exemplo
+
+**Input 1**
+
+```
+26.79 26.76 26.62 26.12 25.47 30.12 30.18 30.65 32.07 32.13 33.17 32.83 32.89 35.47 35.91 37.34 37.62 36.89
+```
+
+**Output 1**
+
+```
+7.7000
+```
+
+**Input 2**
+
+```
+0
+
+```
+
+**Output 2**
+
+```
+0.0000
+```
+
+**Input 3**
+
+```
+0.0 27.0
+```
+
+**Output 3**
+
+```
+27.0000
+```
+
+**Input 4**
+
+```
+27.0 0.0
+```
+
+**Output 4**
+
+```
+0.0000
+```
+
+**Input 5**
+
+```
+12 -5 -4 -3 -2 -1 22 27 0 5 6 7
+```
+
+**Output 5**
+
+```
+32.0000
+```
+
+**Input 6**
+
+```
+12 5 6 7 -5 -4 -3 -2 -1 22 27 0
+```
+
+**Output 6**
+
+```
+32.0000
+```
+
+Submeta na tarefa B.
 
 <div style="page-break-after: always"></div>
 
@@ -235,6 +261,7 @@ $Ai_{19}Xpto_5Uus$ (que tem tamanho 12) para decompor.
 
 Escreva um programa que, dada uma fórmula química inventada pelo Rui e terminada por
 “.”, apresenta os elementos que ocorrem na fórmula e o número de átomos de cada um.
+
 
 **Input**
 
@@ -282,4 +309,4 @@ Xpto 5
 Uus 1
 ```
 
-Submeta na tarefa C do concurso IPC_L5.
+Submeta na tarefa C.
