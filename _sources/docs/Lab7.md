@@ -6,7 +6,7 @@ Note bem:
 + Cotação deste guião: 2 pontos
 + Submeta cada uma das tarefas no problema correspondente do concurso IP_L7.
 + Prazo limite de submissão: 23h59m de 6 de dezembro
-+ Prazo limite de validação das submissões aceites: 7 de dezembro.
++ Prazo limite de validação das submissões aceites: 13 de dezembro.
 
 ## Objetivos de aprendizagem
 
