@@ -1,203 +1,252 @@
-#Lab7
+# Lab7
 
-**Substituir tema pelo de Lab3_.md: postos de combustível**. Refazer o enunciado
+
+Note bem:
+
++ Cotação deste guião: 2 pontos
++ Submeta cada uma das tarefas no problema correspondente do concurso IP_L7.
++ Prazo limite de submissão: 23h59m de 6 de dezembro
++ Prazo limite de validação das submissões aceites: 7 de dezembro.
 
 ## Objetivos de aprendizagem
 
-Com este guião exercitaremos:
+Com este guião, exercitaremos:
 
-1. a leitura da consola
-1. escrita formatada
-1. uso de dicionários
-
-## Enunciado
-
-Submeta cada uma das tarefas no problema correspondente do concurso IP_Lx.
-
-### Elementos da tabela periódica
++ o uso de listas
++ o uso de dicionários
 
 
-Acompanhado pela irmã, o Rui continua a estudar química. Para que possa verificar os resultados, vamos preparar uma solução em Python para calcular o peso de algumas moléculas.
+## Combustíveis
 
-```{figure} ./figures/Elements_Pics_Simple_w2000.png
----
-width: 500px
-name: TabelaPeriodica
----
-[Tabela Periódica, em imagens. © 2005-2016 Keith Enevoldsen](https://elements.wlonk.com/) 
+Felizmente o preço dos combustíveis parece estar a baixar, ou assim ouvi nos noticiários. Para verificar, fui ao [site oficial](https://precoscombustiveis.dgeg.gov.pt/estatistica/preco-medio-diario/#download) e obtive os dados do último mês.
 
-```
+Agora só preciso de os tratar, tirar as minhas próprias conclusões e quem sabe, publicá-las num artigo ou relatório.
 
-#### Descrição do caso
+A primeira coisa que preciso é de ser capaz de tratar os dados.
 
-O fluxo elementar dos programas é ler, processar, escrever. Ao começarmos por ler e escrever sabemos que estamos a tratar *bem* os dados e podemos depois concentrar a atenção no processamento.
+Depois, nas próximas semanas, tratarei de obter os dados de um ficheiro, bastando indicar o nome. 
+Esses dados estão num ficheiro `.csv` um formato também considerado pelo Microsoft Excel. Em Python também há formas de tratar estes ficheiros, e isso será ainda outro aspeto do mesmo tema.
 
-A partir de <a href="https://images-of-elements.com/element-properties.php">List of chemical elements with properties</a> foi criado um ficheiro com os elementos da tabela periódica, um elemento por linha.
+Para já, vou manter as coisas simples. `csv` quer dizer *comma-separated values*, ou seja, valores separados por *ponto e vírgula*. 
 
-Cada linha contém, para um elemento, número, período, grupo, símbolo, nome e massa atómica. O número corresponde à quantidade de protões do núcleo do átomo; o período e grupo indicam, respetivamente, a linha e coluna do elemento na tabela perídica; a massa atómica está expressa em $u$ ou $g/mol$, que corresponde por definição a $1/12$ da massa de $C_{12}$.
+Um extrato do ficheiro está disponível em [extrato_Postos.csv](https://tutoria.ualg.pt/2022/mod/resource/view.php?id=82660).
 
-A tabela abaixo apresenta alguns elementos.
-Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em Python) de cada campo.
+### Ler e escrever
 
-| número | período | grupo | símbolo | nome | massa atómica|
-|------- |---------|-------|---------|------|--------------| 
-| 1 | 1 | 1 | H | Hydrogen | 1.008|
-| 2 | 1 | 18 | He | Helium |4.003|
-| 3 | 2 | 1 | Li | Lithium |6.941|
-| 4 | 2 | 2 | Be | Beryllium |9.012|
-| 5 | 2 | 13 | B | Boron |10.81|
-| 6 | 2 | 14 | C | Carbon |12.011|
-| 7 | 2 | 15 | N | Nitrogen |14.007|
-| 8 | 2 | 16 | O | Oxygen |15.999|
-| 9 | 2 | 17 | F | Fluorine |18.998|
+Para ler esses valores pela linha de comandos, sabendo que os valores estão separados por *ponto e vírgula*, basta-me indicar que quero uma lista onde o separador dos elementos é o *ponto e vírgula*.
 
+#### Tarefa A
+Pretendo ler e apresentar o cabeçalho e, até ao fim dos dados, ler as demais linhas e apresentá-las.
+Prepare um programa em Python que leia os dados até ao fim do input e apresente as linhas lidas.
 
-Deverá ter concluído que número, período e grupo são inteiros positivos, que o símbolo e o nome do elemento são strings e que a massa atómica é um float. 
+Na apresentação, quer do cabeçalho quer das linhas, considere a formatação definida para o cabeçalho do esboço de programa dado abaixo, ou seja, as barras verticais devem ficar alinhadas. Para tanto, o primeiro campo ocupa 13 espaços, é seguido por " | " (sem as aspas), seguindo-se o segundo campo centrado em 45 espaços, seguido por " | " (sem as aspas) e, finalmente, o terceiro campo com 11 espaços e justificado à direita.
 
-### Tarefa A: ler e escrever
-A primeira tarefa é preparar um *script* em python que leia da consola linhas com as propriedades de elementos e, para cada linha, apresente a informação com o formato desejado.
+Para o efeito, considere o esboço de programa fornecido abaixo e complete a função `mostra_linha`.
 
-Pretende-se ler obter uma listagem com o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Para efeito de formatação, considere que a dimensão de 15 e dois carateres para os campos nome e símbolo, respetivamente.
+    #!/usr/bin/env python3
+    # -*- coding: utf-8 -*-
+    """
+    Created on Tue Nov 29 20:03:19 2022
 
-O ficheiro não terá mais de 150 linhas e cada linha não terá mais de oitenta caracteres.
+    @author: mmadeira
+    """
 
-#### Caso de teste
-
-**Input**
-
-```
-1 1 1 H Hydrogen 1.008
-2 1 18 He Helium 4.003
-3 2 1 Li Lithium 6.941
-4 2 2 Be Beryllium 9.012
-5 2 13 B Boron 10.81
-6 2 14 C Carbon 12.011
-7 2 15 N Nitrogen 14.007
-8 2 16 O Oxygen 15.999
-9 2 17 F Fluorine 18.998
-```
-
-**Output**
-
-```
-       Hydrogen (H ) 1.008e+00
-         Helium (He) 4.003e+00
-        Lithium (Li) 6.941e+00
-      Beryllium (Be) 9.012e+00
-          Boron (B ) 1.081e+01
-         Carbon (C ) 1.201e+01
-       Nitrogen (N ) 1.401e+01
-         Oxygen (O ) 1.600e+01
-       Fluorine (F ) 1.900e+01
-```
-
-Submeta no problema A do concurso IP_L6.
-
-### Tarefa B: organizar por símbolo químico
-
-Agora que já conseguimos ler e escrever dados, podemos avançar para algo mais interessante. Vamos organizar os elementos por símbolo químico e usar um novo tipo de dados, dicionário, para apresentar a informação dos elementos que nos forem pedidos.
-
-Neste caso, duas etapas: ler a informação dos elementos para um dicionário e depois, para cada símbolo, apresentamos a informação do elemento correspondente. 
-
-Prepare o seu programa para ler o número de elementos a considerar para o dicionário, as linhas com esses elementos e os símbolos pretendidos e apresentar, para cada símbolo pretendido e com a mesma formatação da tarefa anterior, o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Se um símbolo pedido não existir, escreva "None" (sem as aspas).
-
-É requerido que guarde a informação num dicionário considerando que a chave (*key*) é o símbolo químico.
-
-#### Casos de teste
-
-**Input 1**
-
-```
-9
-1 1 1 H Hydrogen 1.008
-2 1 18 He Helium 4.003
-3 2 1 Li Lithium 6.941
-4 2 2 Be Beryllium 9.012
-5 2 13 B Boron 10.81
-6 2 14 C Carbon 12.011
-7 2 15 N Nitrogen 14.007
-8 2 16 O Oxygen 15.999
-9 2 17 F Fluorine 18.998
-H
-O
-```
-
-**Output 1**
-
-```
-       Hydrogen (H ) 1.008e+00
-         Oxygen (O ) 1.600e+01
-```
-
-**Input 2**
-
-```
-9
-1 1 1 H Hydrogen 1.008
-2 1 18 He Helium 4.003
-3 2 1 Li Lithium 6.941
-4 2 2 Be Beryllium 9.012
-5 2 13 B Boron 10.81
-6 2 14 C Carbon 12.011
-7 2 15 N Nitrogen 14.007
-8 2 16 O Oxygen 15.999
-9 2 17 F Fluorine 18.998
-S
-O
-```
-
-**Output 2**
-
-```
-None
-         Oxygen (O ) 1.600e+01
-```
-
-Submeta no problema B do concurso IP_L6.
-
-### Tarefa C: calcular peso de moléculas
-
-Já estamos quase a concluir. Se se recorda da Química, ótimo. Senão, relembramos algumas fórmulas moleculares simples.
-
-| Molécula | Fórmula molecular  |
-| -------- | ------- |
-| Água | $H_2 O$ |
-| Oxigénio | $O_2$|
-| Cloreto de sódio | $Na Cl$ |
-| Dióxido de carbono | $C O_2$ |   
+    import sys
 
 
-A massa molecular de um elemento ou de um composto pode ser estimado pelo somatório, para cada elemento químico que surge na molécula, do produto do número de átomos desse elemento pela respetiva massa atómica. 
+    def mostra_linha(linha: list)-> None:
+        """
+        Apresenta os dados no formato pedido
 
-Parece complicado? Não é! Consideremos a água, $H_2 O$. Os elementos são $H$ e $O$. E se existir mais do que um átomo de um dado elemento, a seguir ao símbolo surge um inteiro. Assim, no caso da água, existem dois átomos de oxigénio e um de hidrogénio e teríamos ``` 1.008e+00 * 2 + 1.600e+01 ```.
+        Parameters
+        ----------
+        linha : list
+            linha do ficheiro (excluindo cabeçalho).
+
+        >>> mostra_linha(['"2022-10-30"', '"Gasolina especial 98"', '"2,0687 €"'])
+        "2022-10-30"  |             "Gasolina especial 98"            |  "2,0687 €"
+        >>> mostra_linha(['"2022-10-30"', '"Gasolina 98"', '"2,0616 €"'])
+        "2022-10-30"  |                 "Gasolina 98"                 |  "2,0616 €"
+        """
+        pass
+        
+
+    def test_combustíveis():
+        cabeçalho = input().split(';')
+        topo_data, topo_tipo_combustível, topo_preço = cabeçalho
+        print('{0:14s} | {1:45s} | {2:>11s}'.format(topo_data.title(), topo_tipo_combustível.title().center(45), topo_preço.title()))
+        while True:
+            try:
+                line = input().split(';')
+            except (EOFError, KeyboardInterrupt):
+                sys.exit(0)
+            if line:
+                mostra_linha(line)
+            else:
+                sys.exit(0)
+
+    if __name__ == '__main__':
+        test_combustíveis()
 
 
-Prepare o seu programa para ler o número de elementos a considerar, as linhas com esses elementos e as fórmulas moleculares pretendidas e apresentar, para cada molécula, a massa molecular em notação científica com três casas decimais. 
+No Spyder, use o teste da docstring para aferir a correção da apresentação de resultados, fazendo
 
-#### Caso de teste
+    import doctest
 
-**Input**
+e, a cada nova versão da função que carregar para a consola
 
-```
-9
-1 1 1 H Hydrogen 1.008
-2 1 18 He Helium 4.003
-3 2 1 Li Lithium 6.941
-4 2 2 Be Beryllium 9.012
-5 2 13 B Boron 10.81
-6 2 14 C Carbon 12.011
-7 2 15 N Nitrogen 14.007
-8 2 16 O Oxygen 15.999
-9 2 17 F Fluorine 18.998
-H2O
-CO2
-```
+    doctest.testmod()
 
-**Output**
+Submeta na tarefa A.
 
-```
-1.802e+01
-4.401e+01
-```
 
-Submeta no problema C do concurso IP_L6.
+### Tratar os dados lidos
+
+Pretendo ler e apresentar o cabeçalho e, até ao fim dos dados, ler as demais linhas e apresentá-las de forma mais cuidada: vou retirar as aspas das strings e vou apresentar o preço depois de convertido para um número real.
+
+#### Tarefa B
+
+Prepare um programa em Python que leia os dados até ao fim do input e apresente as linhas lidas.
+A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dados. Cada linha de dados contém três campos, separados por ';' e delimitados por '"'; a informação nesses campos corresponde respetivamente à data, ao tipo de combustível e ao preço do combustível. O formato usado no preço inclui a vírgula como separador decimal e o símbolo da moeda usada (€).
+
+
+
+Para o efeito, acrescente a função `converte_dados` ao programa da tarefa anterior e complete-a.
+
+
+    def converte_dados(linha:list) -> list:
+        """
+        Retira as aspas da data e tipo de combustível e converte o preço para real.
+
+        Parameters
+        ----------
+        linha : list
+            linha do ficheiro (excluindo cabeçalho).
+
+        Returns
+        -------
+        list
+            lista contendo uma strings para data e tipo de combustível e 
+            um número real para preço.
+            
+        >>> converte_dados(['"2022-10-30"', '"Gasolina especial 98"', '"2,0687 €"'])
+        ['2022-10-30', 'Gasolina especial 98', 2.0687]
+        """
+        pass
+
+
+Submeta na tarefa B.
+
+### Separar os tipos de combustíveis
+
+Pretendo agora separar os preços de cada tipo de combustível e saber o preço médio de cada tipo de combustível.
+
+#### Tarefa C
+
+Prepare um programa em Python que apresente o preço médio de cada tipo de combustível.
+A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dados. Cada linha de dados contém três campos, separados por ';' e delimitados por '"'; a informação nesses campos corresponde respetivamente à data, ao tipo de combustível e ao preço do combustível. O formato usado no preço inclui a vírgula como separador decimal e o símbolo da moeda usada (€).
+
+O output é composto por tantas linhas quantos os tipos de combustível e cada linha contém a designação do tipo de combustível seguida por ": " (sem as aspas) e o valor médio desse tipo de combustível.
+
+**Requisito técnico**: carregue os dados lidos para um dicionário onde o tipo de combustível é a chave e associado à chave está uma lista com os preços desse tipo de combustível.
+
+Sugestão de resolução: 
+
++ Implemente uma função que receba uma string e um número real e os apresente no formato pretendido.
+
++ Implemente uma função que receba uma lista e devolva o valor médio dos elementos dessa lista.
++ Implemente uma função que receba uma linha lida e guarde, num dicionário, o preço na coleção de valores associados à chave que é a designação do tipo de combustível. 
++ Implemente uma função que receba um dicionário e, para cada chave do dicionário, obtenha a média dos valores e apresente a chave e valor.
+
+Considere usar os esboços seguintes:
+
+    def mostra_combustivel_valor(tipo: str, valor: float) -> None:
+        """
+        Apresenta o tipo de combustível e o valor.
+
+        Parameters
+        ----------
+        tipo : str
+            O tipo de combustível
+        valor : float
+            o valor a apresentar
+
+        >>> mostra_combustivel_valor('Exemplo de tipo de combustível', 3.5)
+        Exemplo de tipo de combustível: 3.5
+        """
+        pass
+
+
+
+    def calcula_média(lista: list) -> float:
+        """
+        Devolve a média de uma lista de valores numéricos.
+
+        Parameters
+        ----------
+        lista : list
+            Uma lista não nula de valores numéricos.
+
+        Returns
+        -------
+        float
+            A média aritmética dos valores da lista.
+
+        >>> calcula_média([3])
+        3
+        >>> calcula_média([3, 5])
+        4
+        >>> calcula_média([3, 5.0, 12, -1])
+        4.75
+        """
+        pass
+
+
+    def guarda_no_dicionário(dicio: dict, tipo: str, valor: float) -> dict:
+        """
+        Guarda no dicionário o valor associado à chave representada pelo tipo.
+        
+        Se a chave não existir, cria essa chave e associa uma lista com o valor;
+        se a chave existir, acrescenta o valor à lista associada a essa chave.
+
+        Parameters
+        ----------
+        tipo : str
+            DESCRIPTION.
+        valor : real
+            DESCRIPTION.
+
+        >>> guarda_no_dicionário({}, "Gasóleo", 0.7)
+        {'Gasóleo': [0.7]}
+        >>> guarda_no_dicionário({'Gasóleo': [0.7]}, "Gasóleo", 0.8)
+        {'Gasóleo': [0.7, 0.8]}
+        >>> guarda_no_dicionário({'Gasóleo': [0.7, 0.8]}, "Gasolina", 1.2)
+        {'Gasóleo': [0.7, 0.8], 'Gasolina': [1.2]}
+        """
+        pass
+
+
+    def mostra_resultado(dicio: dict) -> None:
+        """Percorre o dicionário para produzir a listagem desejada.
+        
+        >>> mostra_resultado({'Gasóleo': [0.7]})
+        Gasóleo: 0.7
+        >>> mostra_resultado({'Gasóleo': [0.7, 0.8], 'Gasolina': [1.2]})
+        Gasóleo: 0.75
+        Gasolina: 1.2
+        """
+        pass
+
+
+Submeta na tarefa C.
+
+
+
+
+
+
+
+
+
+
+

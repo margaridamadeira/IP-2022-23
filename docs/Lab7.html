@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Objetivos de aprendizagem &#8212; Introdução à programação</title>
+    <title>Lab7 &#8212; Introdução à programação</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -44,8 +44,6 @@
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -56,6 +54,7 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IP-2022-23/docs/Lab7.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Lab6" href="Lab6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -147,13 +146,18 @@
    Criação de soluções
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython4.html">
+   Tuplos, conjuntos e dicionários
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Guiões práticos
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -202,6 +206,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Lab6.html">
    Lab6
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab7
   </a>
  </li>
 </ul>
@@ -275,60 +284,48 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
    Objetivos de aprendizagem
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#enunciado">
-   Enunciado
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combustiveis">
+   Combustíveis
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#elementos-da-tabela-periodica">
-     Elementos da tabela periódica
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ler-e-escrever">
+     Ler e escrever
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#descricao-do-caso">
-       Descrição do caso
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tarefa-a">
+       Tarefa A
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-a-ler-e-escrever">
-     Tarefa A: ler e escrever
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tratar-os-dados-lidos">
+     Tratar os dados lidos
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#caso-de-teste">
-       Caso de teste
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tarefa-b">
+       Tarefa B
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-b-organizar-por-simbolo-quimico">
-     Tarefa B: organizar por símbolo químico
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#separar-os-tipos-de-combustiveis">
+     Separar os tipos de combustíveis
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#casos-de-teste">
-       Casos de teste
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-c-calcular-peso-de-moleculas">
-     Tarefa C: calcular peso de moléculas
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Caso de teste
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tarefa-c">
+       Tarefa C
       </a>
      </li>
     </ul>
@@ -346,248 +343,227 @@
         
               <div>
                 
-  <p>#Lab7</p>
-<p><strong>Substituir tema pelo de Lab3_.md: postos de combustível</strong>. Refazer o enunciado</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab7">
+<h1>Lab7<a class="headerlink" href="#lab7" title="Link permanente para este título">¶</a></h1>
+<p>Note bem:</p>
+<ul class="simple">
+<li><p>Cotação deste guião: 2 pontos</p></li>
+<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IP_L7.</p></li>
+<li><p>Prazo limite de submissão: 23h59m de 6 de dezembro</p></li>
+<li><p>Prazo limite de validação das submissões aceites: 7 de dezembro.</p></li>
+</ul>
 <div class="section" id="objetivos-de-aprendizagem">
-<h1>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h1>
-<p>Com este guião exercitaremos:</p>
-<ol class="simple">
-<li><p>a leitura da consola</p></li>
-<li><p>escrita formatada</p></li>
-<li><p>uso de dicionários</p></li>
-</ol>
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
+<p>Com este guião, exercitaremos:</p>
+<ul class="simple">
+<li><p>o uso de listas</p></li>
+<li><p>o uso de dicionários</p></li>
+</ul>
 </div>
-<div class="section" id="enunciado">
-<h1>Enunciado<a class="headerlink" href="#enunciado" title="Link permanente para este título">¶</a></h1>
-<p>Submeta cada uma das tarefas no problema correspondente do concurso IP_Lx.</p>
-<div class="section" id="elementos-da-tabela-periodica">
-<h2>Elementos da tabela periódica<a class="headerlink" href="#elementos-da-tabela-periodica" title="Link permanente para este título">¶</a></h2>
-<p>Acompanhado pela irmã, o Rui continua a estudar química. Para que possa verificar os resultados, vamos preparar uma solução em Python para calcular o peso de algumas moléculas.</p>
-<div class="figure align-default" id="tabelaperiodica">
-<a class="reference internal image-reference" href="../_images/Elements_Pics_Simple_w2000.png"><img alt="../_images/Elements_Pics_Simple_w2000.png" src="../_images/Elements_Pics_Simple_w2000.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://elements.wlonk.com/">Tabela Periódica, em imagens. © 2005-2016 Keith Enevoldsen</a></span><a class="headerlink" href="#tabelaperiodica" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="descricao-do-caso">
-<h3>Descrição do caso<a class="headerlink" href="#descricao-do-caso" title="Link permanente para este título">¶</a></h3>
-<p>O fluxo elementar dos programas é ler, processar, escrever. Ao começarmos por ler e escrever sabemos que estamos a tratar <em>bem</em> os dados e podemos depois concentrar a atenção no processamento.</p>
-<p>A partir de <a href="https://images-of-elements.com/element-properties.php">List of chemical elements with properties</a> foi criado um ficheiro com os elementos da tabela periódica, um elemento por linha.</p>
-<p>Cada linha contém, para um elemento, número, período, grupo, símbolo, nome e massa atómica. O número corresponde à quantidade de protões do núcleo do átomo; o período e grupo indicam, respetivamente, a linha e coluna do elemento na tabela perídica; a massa atómica está expressa em <span class="math notranslate nohighlight">\(u\)</span> ou <span class="math notranslate nohighlight">\(g/mol\)</span>, que corresponde por definição a <span class="math notranslate nohighlight">\(1/12\)</span> da massa de <span class="math notranslate nohighlight">\(C_{12}\)</span>.</p>
-<p>A tabela abaixo apresenta alguns elementos.
-Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em Python) de cada campo.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>número</p></th>
-<th class="head"><p>período</p></th>
-<th class="head"><p>grupo</p></th>
-<th class="head"><p>símbolo</p></th>
-<th class="head"><p>nome</p></th>
-<th class="head"><p>massa atómica</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>H</p></td>
-<td><p>Hydrogen</p></td>
-<td><p>1.008</p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p>1</p></td>
-<td><p>18</p></td>
-<td><p>He</p></td>
-<td><p>Helium</p></td>
-<td><p>4.003</p></td>
-</tr>
-<tr class="row-even"><td><p>3</p></td>
-<td><p>2</p></td>
-<td><p>1</p></td>
-<td><p>Li</p></td>
-<td><p>Lithium</p></td>
-<td><p>6.941</p></td>
-</tr>
-<tr class="row-odd"><td><p>4</p></td>
-<td><p>2</p></td>
-<td><p>2</p></td>
-<td><p>Be</p></td>
-<td><p>Beryllium</p></td>
-<td><p>9.012</p></td>
-</tr>
-<tr class="row-even"><td><p>5</p></td>
-<td><p>2</p></td>
-<td><p>13</p></td>
-<td><p>B</p></td>
-<td><p>Boron</p></td>
-<td><p>10.81</p></td>
-</tr>
-<tr class="row-odd"><td><p>6</p></td>
-<td><p>2</p></td>
-<td><p>14</p></td>
-<td><p>C</p></td>
-<td><p>Carbon</p></td>
-<td><p>12.011</p></td>
-</tr>
-<tr class="row-even"><td><p>7</p></td>
-<td><p>2</p></td>
-<td><p>15</p></td>
-<td><p>N</p></td>
-<td><p>Nitrogen</p></td>
-<td><p>14.007</p></td>
-</tr>
-<tr class="row-odd"><td><p>8</p></td>
-<td><p>2</p></td>
-<td><p>16</p></td>
-<td><p>O</p></td>
-<td><p>Oxygen</p></td>
-<td><p>15.999</p></td>
-</tr>
-<tr class="row-even"><td><p>9</p></td>
-<td><p>2</p></td>
-<td><p>17</p></td>
-<td><p>F</p></td>
-<td><p>Fluorine</p></td>
-<td><p>18.998</p></td>
-</tr>
-</tbody>
-</table>
-<p>Deverá ter concluído que número, período e grupo são inteiros positivos, que o símbolo e o nome do elemento são strings e que a massa atómica é um float.</p>
-</div>
-</div>
-<div class="section" id="tarefa-a-ler-e-escrever">
-<h2>Tarefa A: ler e escrever<a class="headerlink" href="#tarefa-a-ler-e-escrever" title="Link permanente para este título">¶</a></h2>
-<p>A primeira tarefa é preparar um <em>script</em> em python que leia da consola linhas com as propriedades de elementos e, para cada linha, apresente a informação com o formato desejado.</p>
-<p>Pretende-se ler obter uma listagem com o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Para efeito de formatação, considere que a dimensão de 15 e dois carateres para os campos nome e símbolo, respetivamente.</p>
-<p>O ficheiro não terá mais de 150 linhas e cada linha não terá mais de oitenta caracteres.</p>
-<div class="section" id="caso-de-teste">
-<h3>Caso de teste<a class="headerlink" href="#caso-de-teste" title="Link permanente para este título">¶</a></h3>
-<p><strong>Input</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="n">H</span> <span class="n">Hydrogen</span> <span class="mf">1.008</span>
-<span class="mi">2</span> <span class="mi">1</span> <span class="mi">18</span> <span class="n">He</span> <span class="n">Helium</span> <span class="mf">4.003</span>
-<span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span> <span class="n">Li</span> <span class="n">Lithium</span> <span class="mf">6.941</span>
-<span class="mi">4</span> <span class="mi">2</span> <span class="mi">2</span> <span class="n">Be</span> <span class="n">Beryllium</span> <span class="mf">9.012</span>
-<span class="mi">5</span> <span class="mi">2</span> <span class="mi">13</span> <span class="n">B</span> <span class="n">Boron</span> <span class="mf">10.81</span>
-<span class="mi">6</span> <span class="mi">2</span> <span class="mi">14</span> <span class="n">C</span> <span class="n">Carbon</span> <span class="mf">12.011</span>
-<span class="mi">7</span> <span class="mi">2</span> <span class="mi">15</span> <span class="n">N</span> <span class="n">Nitrogen</span> <span class="mf">14.007</span>
-<span class="mi">8</span> <span class="mi">2</span> <span class="mi">16</span> <span class="n">O</span> <span class="n">Oxygen</span> <span class="mf">15.999</span>
-<span class="mi">9</span> <span class="mi">2</span> <span class="mi">17</span> <span class="n">F</span> <span class="n">Fluorine</span> <span class="mf">18.998</span>
+<div class="section" id="combustiveis">
+<h2>Combustíveis<a class="headerlink" href="#combustiveis" title="Link permanente para este título">¶</a></h2>
+<p>Felizmente o preço dos combustíveis parece estar a baixar, ou assim ouvi nos noticiários. Para verificar, fui ao <a class="reference external" href="https://precoscombustiveis.dgeg.gov.pt/estatistica/preco-medio-diario/#download">site oficial</a> e obtive os dados do último mês.</p>
+<p>Agora só preciso de os tratar, tirar as minhas próprias conclusões e quem sabe, publicá-las num artigo ou relatório.</p>
+<p>A primeira coisa que preciso é de ser capaz de tratar os dados.</p>
+<p>Depois, nas próximas semanas, tratarei de obter os dados de um ficheiro, bastando indicar o nome.
+Esses dados estão num ficheiro <code class="docutils literal notranslate"><span class="pre">.csv</span></code> um formato também considerado pelo Microsoft Excel. Em Python também há formas de tratar estes ficheiros, e isso será ainda outro aspeto do mesmo tema.</p>
+<p>Para já, vou manter as coisas simples. <code class="docutils literal notranslate"><span class="pre">csv</span></code> quer dizer <em>comma-separated values</em>, ou seja, valores separados por <em>ponto e vírgula</em>.</p>
+<p>Um extrato do ficheiro está disponível em <a class="reference external" href="https://tutoria.ualg.pt/2022/mod/resource/view.php?id=82660">extrato_Postos.csv</a>.</p>
+<div class="section" id="ler-e-escrever">
+<h3>Ler e escrever<a class="headerlink" href="#ler-e-escrever" title="Link permanente para este título">¶</a></h3>
+<p>Para ler esses valores pela linha de comandos, sabendo que os valores estão separados por <em>ponto e vírgula</em>, basta-me indicar que quero uma lista onde o separador dos elementos é o <em>ponto e vírgula</em>.</p>
+<div class="section" id="tarefa-a">
+<h4>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h4>
+<p>Pretendo ler e apresentar o cabeçalho e, até ao fim dos dados, ler as demais linhas e apresentá-las.
+Prepare um programa em Python que leia os dados até ao fim do input e apresente as linhas lidas.</p>
+<p>Na apresentação, quer do cabeçalho quer das linhas, considere a formatação definida para o cabeçalho do esboço de programa dado abaixo, ou seja, as barras verticais devem ficar alinhadas. Para tanto, o primeiro campo ocupa 13 espaços, é seguido por » | » (sem as aspas), seguindo-se o segundo campo centrado em 45 espaços, seguido por » | » (sem as aspas) e, finalmente, o terceiro campo com 11 espaços e justificado à direita.</p>
+<p>Para o efeito, considere o esboço de programa fornecido abaixo e complete a função <code class="docutils literal notranslate"><span class="pre">mostra_linha</span></code>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+Created on Tue Nov 29 20:03:19 2022
+
+@author: mmadeira
+&quot;&quot;&quot;
+
+import sys
+
+
+def mostra_linha(linha: list)-&gt; None:
+    &quot;&quot;&quot;
+    Apresenta os dados no formato pedido
+
+    Parameters
+    ----------
+    linha : list
+        linha do ficheiro (excluindo cabeçalho).
+
+    &gt;&gt;&gt; mostra_linha([&#39;&quot;2022-10-30&quot;&#39;, &#39;&quot;Gasolina especial 98&quot;&#39;, &#39;&quot;2,0687 €&quot;&#39;])
+    &quot;2022-10-30&quot;  |             &quot;Gasolina especial 98&quot;            |  &quot;2,0687 €&quot;
+    &gt;&gt;&gt; mostra_linha([&#39;&quot;2022-10-30&quot;&#39;, &#39;&quot;Gasolina 98&quot;&#39;, &#39;&quot;2,0616 €&quot;&#39;])
+    &quot;2022-10-30&quot;  |                 &quot;Gasolina 98&quot;                 |  &quot;2,0616 €&quot;
+    &quot;&quot;&quot;
+    pass
+    
+
+def test_combustíveis():
+    cabeçalho = input().split(&#39;;&#39;)
+    topo_data, topo_tipo_combustível, topo_preço = cabeçalho
+    print(&#39;{0:14s} | {1:45s} | {2:&gt;11s}&#39;.format(topo_data.title(), topo_tipo_combustível.title().center(45), topo_preço.title()))
+    while True:
+        try:
+            line = input().split(&#39;;&#39;)
+        except (EOFError, KeyboardInterrupt):
+            sys.exit(0)
+        if line:
+            mostra_linha(line)
+        else:
+            sys.exit(0)
+
+if __name__ == &#39;__main__&#39;:
+    test_combustíveis()
 </pre></div>
 </div>
-<p><strong>Output</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>       <span class="n">Hydrogen</span> <span class="p">(</span><span class="n">H</span> <span class="p">)</span> <span class="mf">1.008e+00</span>
-         <span class="n">Helium</span> <span class="p">(</span><span class="n">He</span><span class="p">)</span> <span class="mf">4.003e+00</span>
-        <span class="n">Lithium</span> <span class="p">(</span><span class="n">Li</span><span class="p">)</span> <span class="mf">6.941e+00</span>
-      <span class="n">Beryllium</span> <span class="p">(</span><span class="n">Be</span><span class="p">)</span> <span class="mf">9.012e+00</span>
-          <span class="n">Boron</span> <span class="p">(</span><span class="n">B</span> <span class="p">)</span> <span class="mf">1.081e+01</span>
-         <span class="n">Carbon</span> <span class="p">(</span><span class="n">C</span> <span class="p">)</span> <span class="mf">1.201e+01</span>
-       <span class="n">Nitrogen</span> <span class="p">(</span><span class="n">N</span> <span class="p">)</span> <span class="mf">1.401e+01</span>
-         <span class="n">Oxygen</span> <span class="p">(</span><span class="n">O</span> <span class="p">)</span> <span class="mf">1.600e+01</span>
-       <span class="n">Fluorine</span> <span class="p">(</span><span class="n">F</span> <span class="p">)</span> <span class="mf">1.900e+01</span>
+<p>No Spyder, use o teste da docstring para aferir a correção da apresentação de resultados, fazendo</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import doctest
 </pre></div>
 </div>
-<p>Submeta no problema A do concurso IP_L6.</p>
-</div>
-</div>
-<div class="section" id="tarefa-b-organizar-por-simbolo-quimico">
-<h2>Tarefa B: organizar por símbolo químico<a class="headerlink" href="#tarefa-b-organizar-por-simbolo-quimico" title="Link permanente para este título">¶</a></h2>
-<p>Agora que já conseguimos ler e escrever dados, podemos avançar para algo mais interessante. Vamos organizar os elementos por símbolo químico e usar um novo tipo de dados, dicionário, para apresentar a informação dos elementos que nos forem pedidos.</p>
-<p>Neste caso, duas etapas: ler a informação dos elementos para um dicionário e depois, para cada símbolo, apresentamos a informação do elemento correspondente.</p>
-<p>Prepare o seu programa para ler o número de elementos a considerar para o dicionário, as linhas com esses elementos e os símbolos pretendidos e apresentar, para cada símbolo pretendido e com a mesma formatação da tarefa anterior, o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Se um símbolo pedido não existir, escreva «None» (sem as aspas).</p>
-<p>É requerido que guarde a informação num dicionário considerando que a chave (<em>key</em>) é o símbolo químico.</p>
-<div class="section" id="casos-de-teste">
-<h3>Casos de teste<a class="headerlink" href="#casos-de-teste" title="Link permanente para este título">¶</a></h3>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span>
-<span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="n">H</span> <span class="n">Hydrogen</span> <span class="mf">1.008</span>
-<span class="mi">2</span> <span class="mi">1</span> <span class="mi">18</span> <span class="n">He</span> <span class="n">Helium</span> <span class="mf">4.003</span>
-<span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span> <span class="n">Li</span> <span class="n">Lithium</span> <span class="mf">6.941</span>
-<span class="mi">4</span> <span class="mi">2</span> <span class="mi">2</span> <span class="n">Be</span> <span class="n">Beryllium</span> <span class="mf">9.012</span>
-<span class="mi">5</span> <span class="mi">2</span> <span class="mi">13</span> <span class="n">B</span> <span class="n">Boron</span> <span class="mf">10.81</span>
-<span class="mi">6</span> <span class="mi">2</span> <span class="mi">14</span> <span class="n">C</span> <span class="n">Carbon</span> <span class="mf">12.011</span>
-<span class="mi">7</span> <span class="mi">2</span> <span class="mi">15</span> <span class="n">N</span> <span class="n">Nitrogen</span> <span class="mf">14.007</span>
-<span class="mi">8</span> <span class="mi">2</span> <span class="mi">16</span> <span class="n">O</span> <span class="n">Oxygen</span> <span class="mf">15.999</span>
-<span class="mi">9</span> <span class="mi">2</span> <span class="mi">17</span> <span class="n">F</span> <span class="n">Fluorine</span> <span class="mf">18.998</span>
-<span class="n">H</span>
-<span class="n">O</span>
+<p>e, a cada nova versão da função que carregar para a consola</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>doctest.testmod()
 </pre></div>
 </div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>       <span class="n">Hydrogen</span> <span class="p">(</span><span class="n">H</span> <span class="p">)</span> <span class="mf">1.008e+00</span>
-         <span class="n">Oxygen</span> <span class="p">(</span><span class="n">O</span> <span class="p">)</span> <span class="mf">1.600e+01</span>
+<p>Submeta na tarefa A.</p>
+</div>
+</div>
+<div class="section" id="tratar-os-dados-lidos">
+<h3>Tratar os dados lidos<a class="headerlink" href="#tratar-os-dados-lidos" title="Link permanente para este título">¶</a></h3>
+<p>Pretendo ler e apresentar o cabeçalho e, até ao fim dos dados, ler as demais linhas e apresentá-las de forma mais cuidada: vou retirar as aspas das strings e vou apresentar o preço depois de convertido para um número real.</p>
+<div class="section" id="tarefa-b">
+<h4>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h4>
+<p>Prepare um programa em Python que leia os dados até ao fim do input e apresente as linhas lidas.
+A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dados. Cada linha de dados contém três campos, separados por “;” e delimitados por “»”; a informação nesses campos corresponde respetivamente à data, ao tipo de combustível e ao preço do combustível. O formato usado no preço inclui a vírgula como separador decimal e o símbolo da moeda usada (€).</p>
+<p>Para o efeito, acrescente a função <code class="docutils literal notranslate"><span class="pre">converte_dados</span></code> ao programa da tarefa anterior e complete-a.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def converte_dados(linha:list) -&gt; list:
+    &quot;&quot;&quot;
+    Retira as aspas da data e tipo de combustível e converte o preço para real.
+
+    Parameters
+    ----------
+    linha : list
+        linha do ficheiro (excluindo cabeçalho).
+
+    Returns
+    -------
+    list
+        lista contendo uma strings para data e tipo de combustível e 
+        um número real para preço.
+        
+    &gt;&gt;&gt; converte_dados([&#39;&quot;2022-10-30&quot;&#39;, &#39;&quot;Gasolina especial 98&quot;&#39;, &#39;&quot;2,0687 €&quot;&#39;])
+    [&#39;2022-10-30&#39;, &#39;Gasolina especial 98&#39;, 2.0687]
+    &quot;&quot;&quot;
+    pass
 </pre></div>
 </div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span>
-<span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="n">H</span> <span class="n">Hydrogen</span> <span class="mf">1.008</span>
-<span class="mi">2</span> <span class="mi">1</span> <span class="mi">18</span> <span class="n">He</span> <span class="n">Helium</span> <span class="mf">4.003</span>
-<span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span> <span class="n">Li</span> <span class="n">Lithium</span> <span class="mf">6.941</span>
-<span class="mi">4</span> <span class="mi">2</span> <span class="mi">2</span> <span class="n">Be</span> <span class="n">Beryllium</span> <span class="mf">9.012</span>
-<span class="mi">5</span> <span class="mi">2</span> <span class="mi">13</span> <span class="n">B</span> <span class="n">Boron</span> <span class="mf">10.81</span>
-<span class="mi">6</span> <span class="mi">2</span> <span class="mi">14</span> <span class="n">C</span> <span class="n">Carbon</span> <span class="mf">12.011</span>
-<span class="mi">7</span> <span class="mi">2</span> <span class="mi">15</span> <span class="n">N</span> <span class="n">Nitrogen</span> <span class="mf">14.007</span>
-<span class="mi">8</span> <span class="mi">2</span> <span class="mi">16</span> <span class="n">O</span> <span class="n">Oxygen</span> <span class="mf">15.999</span>
-<span class="mi">9</span> <span class="mi">2</span> <span class="mi">17</span> <span class="n">F</span> <span class="n">Fluorine</span> <span class="mf">18.998</span>
-<span class="n">S</span>
-<span class="n">O</span>
+<p>Submeta na tarefa B.</p>
+</div>
+</div>
+<div class="section" id="separar-os-tipos-de-combustiveis">
+<h3>Separar os tipos de combustíveis<a class="headerlink" href="#separar-os-tipos-de-combustiveis" title="Link permanente para este título">¶</a></h3>
+<p>Pretendo agora separar os preços de cada tipo de combustível e saber o preço médio de cada tipo de combustível.</p>
+<div class="section" id="tarefa-c">
+<h4>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h4>
+<p>Prepare um programa em Python que apresente o preço médio de cada tipo de combustível.
+A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dados. Cada linha de dados contém três campos, separados por “;” e delimitados por “»”; a informação nesses campos corresponde respetivamente à data, ao tipo de combustível e ao preço do combustível. O formato usado no preço inclui a vírgula como separador decimal e o símbolo da moeda usada (€).</p>
+<p>O output é composto por tantas linhas quantos os tipos de combustível e cada linha contém a designação do tipo de combustível seguida por «: » (sem as aspas) e o valor médio desse tipo de combustível.</p>
+<p><strong>Requisito técnico</strong>: carregue os dados lidos para um dicionário onde o tipo de combustível é a chave e associado à chave está uma lista com os preços desse tipo de combustível.</p>
+<p>Sugestão de resolução:</p>
+<ul class="simple">
+<li><p>Implemente uma função que receba uma string e um número real e os apresente no formato pretendido.</p></li>
+<li><p>Implemente uma função que receba uma lista e devolva o valor médio dos elementos dessa lista.</p></li>
+<li><p>Implemente uma função que receba uma linha lida e guarde, num dicionário, o preço na coleção de valores associados à chave que é a designação do tipo de combustível.</p></li>
+<li><p>Implemente uma função que receba um dicionário e, para cada chave do dicionário, obtenha a média dos valores e apresente a chave e valor.</p></li>
+</ul>
+<p>Considere usar os esboços seguintes:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def mostra_combustivel_valor(tipo: str, valor: float) -&gt; None:
+    &quot;&quot;&quot;
+    Apresenta o tipo de combustível e o valor.
+
+    Parameters
+    ----------
+    tipo : str
+        O tipo de combustível
+    valor : float
+        o valor a apresentar
+
+    &gt;&gt;&gt; mostra_combustivel_valor(&#39;Exemplo de tipo de combustível&#39;, 3.5)
+    Exemplo de tipo de combustível: 3.5
+    &quot;&quot;&quot;
+    pass
+
+
+
+def calcula_média(lista: list) -&gt; float:
+    &quot;&quot;&quot;
+    Devolve a média de uma lista de valores numéricos.
+
+    Parameters
+    ----------
+    lista : list
+        Uma lista não nula de valores numéricos.
+
+    Returns
+    -------
+    float
+        A média aritmética dos valores da lista.
+
+    &gt;&gt;&gt; calcula_média([3])
+    3
+    &gt;&gt;&gt; calcula_média([3, 5])
+    4
+    &gt;&gt;&gt; calcula_média([3, 5.0, 12, -1])
+    4.75
+    &quot;&quot;&quot;
+    pass
+
+
+def guarda_no_dicionário(dicio: dict, tipo: str, valor: float) -&gt; dict:
+    &quot;&quot;&quot;
+    Guarda no dicionário o valor associado à chave representada pelo tipo.
+    
+    Se a chave não existir, cria essa chave e associa uma lista com o valor;
+    se a chave existir, acrescenta o valor à lista associada a essa chave.
+
+    Parameters
+    ----------
+    tipo : str
+        DESCRIPTION.
+    valor : real
+        DESCRIPTION.
+
+    &gt;&gt;&gt; guarda_no_dicionário({}, &quot;Gasóleo&quot;, 0.7)
+    {&#39;Gasóleo&#39;: [0.7]}
+    &gt;&gt;&gt; guarda_no_dicionário({&#39;Gasóleo&#39;: [0.7]}, &quot;Gasóleo&quot;, 0.8)
+    {&#39;Gasóleo&#39;: [0.7, 0.8]}
+    &gt;&gt;&gt; guarda_no_dicionário({&#39;Gasóleo&#39;: [0.7, 0.8]}, &quot;Gasolina&quot;, 1.2)
+    {&#39;Gasóleo&#39;: [0.7, 0.8], &#39;Gasolina&#39;: [1.2]}
+    &quot;&quot;&quot;
+    pass
+
+
+def mostra_resultado(dicio: dict) -&gt; None:
+    &quot;&quot;&quot;Percorre o dicionário para produzir a listagem desejada.
+    
+    &gt;&gt;&gt; mostra_resultado({&#39;Gasóleo&#39;: [0.7]})
+    Gasóleo: 0.7
+    &gt;&gt;&gt; mostra_resultado({&#39;Gasóleo&#39;: [0.7, 0.8], &#39;Gasolina&#39;: [1.2]})
+    Gasóleo: 0.75
+    Gasolina: 1.2
+    &quot;&quot;&quot;
+    pass
 </pre></div>
 </div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
-         <span class="n">Oxygen</span> <span class="p">(</span><span class="n">O</span> <span class="p">)</span> <span class="mf">1.600e+01</span>
-</pre></div>
+<p>Submeta na tarefa C.</p>
 </div>
-<p>Submeta no problema B do concurso IP_L6.</p>
-</div>
-</div>
-<div class="section" id="tarefa-c-calcular-peso-de-moleculas">
-<h2>Tarefa C: calcular peso de moléculas<a class="headerlink" href="#tarefa-c-calcular-peso-de-moleculas" title="Link permanente para este título">¶</a></h2>
-<p>Já estamos quase a concluir. Se se recorda da Química, ótimo. Senão, relembramos algumas fórmulas moleculares simples.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Molécula</p></th>
-<th class="head"><p>Fórmula molecular</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Água</p></td>
-<td><p><span class="math notranslate nohighlight">\(H_2 O\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p>Oxigénio</p></td>
-<td><p><span class="math notranslate nohighlight">\(O_2\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p>Cloreto de sódio</p></td>
-<td><p><span class="math notranslate nohighlight">\(Na Cl\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p>Dióxido de carbono</p></td>
-<td><p><span class="math notranslate nohighlight">\(C O_2\)</span></p></td>
-</tr>
-</tbody>
-</table>
-<p>A massa molecular de um elemento ou de um composto pode ser estimado pelo somatório, para cada elemento químico que surge na molécula, do produto do número de átomos desse elemento pela respetiva massa atómica.</p>
-<p>Parece complicado? Não é! Consideremos a água, <span class="math notranslate nohighlight">\(H_2 O\)</span>. Os elementos são <span class="math notranslate nohighlight">\(H\)</span> e <span class="math notranslate nohighlight">\(O\)</span>. E se existir mais do que um átomo de um dado elemento, a seguir ao símbolo surge um inteiro. Assim, no caso da água, existem dois átomos de oxigénio e um de hidrogénio e teríamos <code class="docutils literal notranslate"><span class="pre">1.008e+00</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">1.600e+01</span></code>.</p>
-<p>Prepare o seu programa para ler o número de elementos a considerar, as linhas com esses elementos e as fórmulas moleculares pretendidas e apresentar, para cada molécula, a massa molecular em notação científica com três casas decimais.</p>
-<div class="section" id="id1">
-<h3>Caso de teste<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h3>
-<p><strong>Input</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span>
-<span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="n">H</span> <span class="n">Hydrogen</span> <span class="mf">1.008</span>
-<span class="mi">2</span> <span class="mi">1</span> <span class="mi">18</span> <span class="n">He</span> <span class="n">Helium</span> <span class="mf">4.003</span>
-<span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span> <span class="n">Li</span> <span class="n">Lithium</span> <span class="mf">6.941</span>
-<span class="mi">4</span> <span class="mi">2</span> <span class="mi">2</span> <span class="n">Be</span> <span class="n">Beryllium</span> <span class="mf">9.012</span>
-<span class="mi">5</span> <span class="mi">2</span> <span class="mi">13</span> <span class="n">B</span> <span class="n">Boron</span> <span class="mf">10.81</span>
-<span class="mi">6</span> <span class="mi">2</span> <span class="mi">14</span> <span class="n">C</span> <span class="n">Carbon</span> <span class="mf">12.011</span>
-<span class="mi">7</span> <span class="mi">2</span> <span class="mi">15</span> <span class="n">N</span> <span class="n">Nitrogen</span> <span class="mf">14.007</span>
-<span class="mi">8</span> <span class="mi">2</span> <span class="mi">16</span> <span class="n">O</span> <span class="n">Oxygen</span> <span class="mf">15.999</span>
-<span class="mi">9</span> <span class="mi">2</span> <span class="mi">17</span> <span class="n">F</span> <span class="n">Fluorine</span> <span class="mf">18.998</span>
-<span class="n">H2O</span>
-<span class="n">CO2</span>
-</pre></div>
-</div>
-<p><strong>Output</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.802e+01</span>
-<span class="mf">4.401e+01</span>
-</pre></div>
-</div>
-<p>Submeta no problema C do concurso IP_L6.</p>
 </div>
 </div>
 </div>
@@ -616,7 +592,14 @@ Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Lab6.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Lab6</p>
+        </div>
+    </a>
 </div>
         
         </div>
