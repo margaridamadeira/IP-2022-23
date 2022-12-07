@@ -16,7 +16,7 @@ parts:
   - file: docs/ProgPython3
   - file: docs/MódulosTestes
   - file: docs/ProgPython4
-#  - file: docs/Ficheiros
+  - file: docs/Ficheiros
 - caption: "Guiões práticos"
   chapters:
   - file: docs/Primeiros_passos 
@@ -31,7 +31,7 @@ parts:
   - file: docs/Lab6
   - file: docs/Lab7
 # - file: docs/F2-2021
-# - file: docs/Lab8
+  - file: docs/Lab8
 # - file: docs/Lab9
 # - file: docs/F3-2122
 
