@@ -1,263 +1,252 @@
-#Lab8
+# Lab8
 
-Submeta cada uma das tarefas ....
+Esta era a Festa de Janeiro prevista para o ano letivo de 2020-2021, que não aconteceu. 
 
+<div style="page-break-after: always"></div>
 
-Estas tarefas foram apresentadas na segunda festa do ano letivo de 2020-2021. Este guião vai ajudar a preparar a próxima festa.
+## Eleições
 
-Reveja a [Informação sobre as Festas de Programação](https://tutoria.ualg.pt/2021/mod/resource/view.php?id=37418).
-Idealmente, reserve três horas e tente resolver os exercícios da festa de forma contínua.
-
-Antes disso, reúna todos os seus materiais para consulta durante a festa e os seus programas anteriores (os que estão no Mooshak pode sempre ir lá buscá-los). Prepare uma pasta para cada problema que vai abordar, e a versão inicial da sua resolução.
-
-## Produtos
-
-
-```{figure} ./figures/reagentes-quimicos.jpg
+```{figure} ./figures/Votar.jpg
 ---
-height: 300px
-name: Reagentes
+height: 100px
+name: Votar
 ---
 ```
 
-Quero organizar o stock do laboratório e vou usar o código universal de produtos.
 
-O código universal de produtos prevê números com 12 dígitos numéricos e o dígito da direita é o dígito de controlo. Formalmente, um número de produto é correto sse
+Neste fim de semana teremos a Eleição para a Presidência da República. 
+Cada secção de voto, apurará os resultados dos candidatos e preciso do apuramento de votos de cada freguesia.
 
-$$ (3 x_1 + x_2 + 3 x_3 + x_4 + 3 x_5 + x_6 + 3 x_7 + x_8 + \\ 3 x_9  + x_{10} + 3 x_{11} + x_{12}) \equiv 0 \pmod {10} $$ 
-em  que $\equiv \pmod{10}$ indica que a expressão à esquerda é congruente a $0$ módulo 10.
+A ordem com que os candidatos surgem no boletim eleitoral é já conhecida:
+Eduardo Nelson da Costa Baptista, Marisa Isabel dos Santos Matias, Marcelo Nuno Duarte Rebelo de Sousa, Tiago Pedro de Sousa Mayan Gonçalves, André Claro Amaral Ventura, Vitorino Francisco da Rocha e Silva, João Manuel Peixoto Ferreira e Ana Maria Rosa Martins Gomes.
+Os votos em Eduardo Nelson da Costa Baptista serão nulos mas até ao apuramento final nacional serão mantidos.
 
-Assim, se quiser obter manualmente o dígito de controlo para o código "03600029145x", farei:
+Cada secção de voto apurará os votos de cada candidato, os brancos e os nulos e produzirá um ficheiro com o formato indicado em seguida, substituindo o 0 (zero) pelo valor adequado. 
 
-+ a soma de algarismo sim, algarismo não, multiplicando o resultado por 3
-+ a soma dos restantes algarismos (obtendo, neste caso, 58)
-+ determino o resto da divisão por 10 (que neste caso é 8)
-+ Se o resto fosse zero, o dígito de controlo seria 0; neste caso o dígito de controlo será $10-8$, portanto 2.
+```
+Eduardo Nelson da Costa Baptista,0
+Marisa Isabel dos Santos Matias,0
+Marcelo Nuno Duarte Rebelo de Sousa,0
+Tiago Pedro de Sousa Mayan Gonçalves,0 
+André Claro Amaral Ventura,0
+Vitorino Francisco da Rocha e Silva,0
+João Manuel Peixoto Ferreira,0
+Ana Maria Rosa Martins Gomes,0
+Votos brancos,0
+Votos nulos,0
+```
 
-Preciso de um programa para determinar o dígito de controlo.
+Cada frequesia tem um número variável de secções de voto. 
+A ideia era que o programa aceitasse ficheiros com a designação geral <nome>\*<.extensão>. Mas alguns não querem nome, outros não usam extensão, outros nem nome nem extensão. Enfim, acordou-se que cada freguesia escolherá a designação que pretender, sendo o número da secção será representado pelo caracter \*. 
+
+Preciso de consolidar essa informação e assim quero um programa que leia a designação geral do ficheiro e o número de ficheiros e apresente o resultado apurado.
 
 ### Tarefa A
 
-Prepare um programa em Python completando que determine o dígito de controlo de um código universal de produto. O programa recebe, da consola, uma única linha contendo 11 carateres numéricos e a letra 'x' e devolverá o dígito de controlo.
+Faça um programa em Python que leia da consola uma linha com o nome genérico dos ficheiros e o número de secções.
 
-### Exemplos
+#### Input
+O programa deverá ler da consola uma linha com o nome genérico dos ficheiros e o número de secções.
+
+#### Output
+O programa deverá escrever na consola o resultado apurado, com o mesmo formato di ficheiro lido e os valores totais.
+
+#### Exemplo
+
+Considere que tinha o ficheiro *Freguesia1.txt* com o conteúdo
+
+```
+Eduardo Nelson da Costa Baptista,1
+Marisa Isabel dos Santos Matias,2
+Marcelo Nuno Duarte Rebelo de Sousa,3
+Tiago Pedro de Sousa Mayan Gonçalves,4 
+André Claro Amaral Ventura,5
+Vitorino Francisco da Rocha e Silva,6
+João Manuel Peixoto Ferreira,7
+Ana Maria Rosa Martins Gomes,8
+Votos brancos,9
+Votos nulos,10
+```
+e o ficheiro *Freguesia2.txt* com o conteúdo
+
+```
+Eduardo Nelson da Costa Baptista,9
+Marisa Isabel dos Santos Matias,8
+Marcelo Nuno Duarte Rebelo de Sousa,7
+Tiago Pedro de Sousa Mayan Gonçalves,6
+André Claro Amaral Ventura,5
+Vitorino Francisco da Rocha e Silva,4
+João Manuel Peixoto Ferreira,3
+Ana Maria Rosa Martins Gomes,2
+Votos brancos,1
+Votos nulos,0
+```
 
 **Input 1**
 
-```
-03600029145x
-```
+Freguesia*.txt 2
 
 **Output 1**
 
 ```
-2
+Eduardo Nelson da Costa Baptista,10
+Marisa Isabel dos Santos Matias,10
+Marcelo Nuno Duarte Rebelo de Sousa,10
+Tiago Pedro de Sousa Mayan Gonçalves,10
+André Claro Amaral Ventura,10
+Vitorino Francisco da Rocha e Silva,10
+João Manuel Peixoto Ferreira,10
+Ana Maria Rosa Martins Gomes,10
+Votos brancos,10
+Votos nulos,10
 ```
 
-**Input 2**
+Submeta na tarefa A.
 
-```
-03600024145x
-```
+## Triângulo de Pascal
 
-**Output 2**
-
-```
-7
-```
-
-**Input 3**
-
-```
-01234567895x
-```
-
-**Output 3**
-
-```
-0
-```
-
-Submeta no problema A.
-
-## Eficácia
-
-```{figure} ./figures/eficacia.jpeg
+```{figure} ./figures/TrianguloPascal.jpg
 ---
 height: 300px
-name: Eficácia
+name: Triângulo de Pascal
 ---
 ```
 
-Pretende-se proceder à avaliação de uma experiência. Cada um de *n* produtos é ensaiado num número indeterminado de amostras. 
+O [triângulo de Pascal](https://mathworld.wolfram.com/PascalsTriangle.html) é uma representação gráfica usada determinação de coeficientes polinomiais na expansão de binómios.
 
-A eficácia de um produto numa amostra é marcada com *1* se o produto é eficaz ou *0* se o produto não é eficaz. Para já, considera-se a eficácia do produto como a média aritmética  dos resultados desse produto nas diferentes amostras.
+A fórmula geral para a determinação dos coeficientes é dada por 
 
-Pretendo uma listagem ordenada dos produtos que têm uma eficácia superior a um valor *v*.
+$$ C_{n,k} = \binom{n}{k} = \frac{n!}{k!(n-k)!}$$ 
 
-### Tarefa B
+para $ n $ e $ k $ inteiros positivos e $ k \in [0, n] $.
 
-Prepare um programa em Python para produzir a listagem pretendida. 
+### Tarefa
 
-O seu programa deve ler, numa primeira linha, um número inteiro e um número real separados por espaços, números esses que correspondem ao número de produtos *n* e ao patamar de eficiência *v*, respetivamente.
-As *n* linhas seguintes contêm a informação de cada produto sendo que em cada linha surgem, separados por vírgulas, o nome do produto e a eficácia desse produto em cada uma das amostras.
+Faça um programa que leia da consola um número inteiro $n$ e apresente os coeficientes para a expansão de um binómio de grau $n$.
 
-O seu programa deve produzir uma listagem dos produtos onde se verificou uma eficácia superior ou igual ao patamar *v*. Nessa listagem, os produtos devem surgir por ordem alfabética e apenas um por linha.
-Caso não existam produtos a apresentar o seu programa deverá apresentar a mensagem "Não há produtos com a eficácia pretendida." (sem as aspas).
+#### Input
 
-**Requisito técnico**: deve usar, pelo menos, um dicionário.
+O programa deve ler da consola um número inteiro.
+
+#### Output
+
+O programa deverá apresentar na consola, numa mesma linha, os coeficientes separados por espaços.
 
 #### Exemplos
 
 **Input 1**
 
 ```
-3 0.3
-Silicato de sódio,1,1,0,0,0
-Oxido de chumbo,0,0,1,0,1
-Acetato de chumbo,0,1,0,1,0
+3
 ```
 
 **Output 1**
 
 ```
-Acetato de chumbo
-Oxido de chumbo
-Silicato de sódio
+1 3 3 1
 ```
 
 **Input 2**
 
 ```
-5 0.5
-Carbonato de bário,0,0,1
-Violeta de genciana,1,0,0
-Cloreto de cálcio,0,1,0
-Acetona,1,1,0
-Azul de metileno,0,1,1
+7
 ```
 
 **Output 2**
-
 ```
-Acetona
-Azul de metileno
+1 7 21 35 35 21 7 1
 ```
 
-**Input 3**
+Submeta na tarefa B.
 
-```
-5 0.7
-Carbonato de bário,0,0,1
-Violeta de genciana,1,0,0
-Cloreto de cálcio,0,1,0
-Acetona,1,1,0
-Azul de metileno,0,1,1
-```
+## Conjetura de Collatz
 
-**Output 3**
-
-```
-Não há produtos com a eficácia pretendida.
-```
-
-Submeta no problema B.
-
-## Maior subida de temperatura
-
-```{figure} ./figures/subida-temperatura.jpeg
+```{figure} ./figures/Collatz_conjecture.png
 ---
 height: 300px
-name: Subida de temperatura
+name: Collatz Conjecture
 ---
 ```
+Fonte da figura: https://imgs.xkcd.com/comics/collatz_conjecture.png
 
-Porque muitas das nossas experiências que funcionaram de forma anómala dependem da temperatura, passámos então a recolher a temperatura no laboratório de hora a hora.
-Houve alturas em que se verificou uma sequência crescente, ou seja, um conjunto de medidas T em que $t_n < t_{n+1}$.
-Para analisarmos a evolução das temperaturas, queremos identificar a maior amplitude das sequências crescentes de temperatura.
+Considere a função 
 
-### Tarefa C
+$$ f(x_n)=\begin{cases}
+			 \frac{1}{2}x_{n-1} & \textrm{se $x_{n-1}$ for um número par}\\
+			 3x_{n-1}+1        & \textrm{se $x_{n-1}$ for ímpar} 
+	     	 \end{cases}
+$$
 
-Dada uma série de medidas de temperatura obtidas durante a realização de uma experiência, pretende-se identificar qual a maior amplitude das sequências crescentes de temperatura. 
+[Collatz](https://mathworld.wolfram.com/CollatzProblem.html) conjeturou se a aplicação sucessiva dessa função terminaria sempre com o valor de $1$ (um) para valores iniciais positivos.
 
-O seu programa deve ler, da consola, uma única linha contendo números reais separados por espaços.
+### Tarefa
 
-O programa deve apresentar um número real com 4 casas decimais que corresponde à maior amplitude das sequências crescentes.
+Queremos testar a conjetura de Collatz, determinando ao fim de quantos passos se atinge o número $1$ (um) e qual o maior valor da sequência.
 
+#### Input 
 
-#### Exemplo
+O programa deve ler da consola um número inteiro.
+
+#### Output
+
+O programa deve apresentar na consola, numa mesma linha e separados pelo espaço, ao fim de quantos passos se atingiu o valor unitário e o maior valor da sequência.
+
+#### Exemplos
 
 **Input 1**
 
 ```
-26.79 26.76 26.62 26.12 25.47 30.12 30.18 30.65 32.07 32.13 33.17 32.83 32.89 35.47 35.91 37.34 37.62 36.89
+1
 ```
 
 **Output 1**
 
 ```
-7.7000
+0 1
 ```
 
 **Input 2**
 
 ```
-0
-
+2
 ```
 
 **Output 2**
-
 ```
-0.0000
+1 2
 ```
 
 **Input 3**
 
 ```
-0.0 27.0
+3
 ```
 
 **Output 3**
-
 ```
-27.0000
+7 16
 ```
 
 **Input 4**
 
 ```
-27.0 0.0
+4
 ```
 
 **Output 4**
-
 ```
-0.0000
+2 4
 ```
 
 **Input 5**
 
 ```
-12 -5 -4 -3 -2 -1 22 27 0 5 6 7
+5
 ```
 
 **Output 5**
-
 ```
-32.0000
-```
-
-**Input 6**
-
-```
-12 5 6 7 -5 -4 -3 -2 -1 22 27 0
+5 16
 ```
 
-**Output 6**
-
-```
-32.0000
-```
-
-Submeta no problema C.
+Submeta na tarefa C.

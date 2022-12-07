@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Produtos &#8212; Introdução à programação</title>
+    <title>Lab8 &#8212; Introdução à programação</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,7 +44,7 @@
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
@@ -56,8 +56,12 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IP-2022-23/docs/Lab8.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Lab7" href="Lab7.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -96,7 +100,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preâmbulo
  </span>
@@ -108,7 +112,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Resumos dos temas
  </span>
@@ -149,13 +153,18 @@
    Tuplos, conjuntos e dicionários
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ficheiros.html">
+   Ficheiros
+  </a>
+ </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Guiões práticos
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -209,6 +218,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Lab7.html">
    Lab7
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab8
   </a>
  </li>
 </ul>
@@ -282,35 +296,57 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Produtos
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eleicoes">
+   Eleições
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tarefa-a">
      Tarefa A
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exemplos">
-     Exemplos
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#input">
+       Input
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#output">
+       Output
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exemplo">
+       Exemplo
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eficacia">
-   Eficácia
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#triangulo-de-pascal">
+   Triângulo de Pascal
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-b">
-     Tarefa B
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa">
+     Tarefa
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id2">
+       Input
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Output
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exemplos">
        Exemplos
       </a>
      </li>
@@ -318,19 +354,29 @@
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#maior-subida-de-temperatura">
-   Maior subida de temperatura
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conjetura-de-collatz">
+   Conjetura de Collatz
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-c">
-     Tarefa C
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Tarefa
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exemplo">
-       Exemplo
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Input
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Output
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Exemplos
       </a>
      </li>
     </ul>
@@ -348,190 +394,206 @@
         
               <div>
                 
-  <p>#Lab8</p>
-<p>Submeta cada uma das tarefas ….</p>
-<p>Estas tarefas foram apresentadas na segunda festa do ano letivo de 2020-2021. Este guião vai ajudar a preparar a próxima festa.</p>
-<p>Reveja a <a class="reference external" href="https://tutoria.ualg.pt/2021/mod/resource/view.php?id=37418">Informação sobre as Festas de Programação</a>.
-Idealmente, reserve três horas e tente resolver os exercícios da festa de forma contínua.</p>
-<p>Antes disso, reúna todos os seus materiais para consulta durante a festa e os seus programas anteriores (os que estão no Mooshak pode sempre ir lá buscá-los). Prepare uma pasta para cada problema que vai abordar, e a versão inicial da sua resolução.</p>
-<div class="section" id="produtos">
-<h1>Produtos<a class="headerlink" href="#produtos" title="Link permanente para este título">¶</a></h1>
-<div class="figure align-default" id="reagentes">
-<a class="reference internal image-reference" href="../_images/reagentes-quimicos.jpg"><img alt="../_images/reagentes-quimicos.jpg" src="../_images/reagentes-quimicos.jpg" style="height: 300px;" /></a>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab8">
+<h1>Lab8<a class="headerlink" href="#lab8" title="Link permanente para este título">¶</a></h1>
+<p>Esta era a Festa de Janeiro prevista para o ano letivo de 2020-2021, que não aconteceu.</p>
+<div style="page-break-after: always"></div>
+<div class="section" id="eleicoes">
+<h2>Eleições<a class="headerlink" href="#eleicoes" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="votar">
+<a class="reference internal image-reference" href="../_images/Votar.jpg"><img alt="../_images/Votar.jpg" src="../_images/Votar.jpg" style="height: 100px;" /></a>
 </div>
-<p>Quero organizar o stock do laboratório e vou usar o código universal de produtos.</p>
-<p>O código universal de produtos prevê números com 12 dígitos numéricos e o dígito da direita é o dígito de controlo. Formalmente, um número de produto é correto sse</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} (3 x_1 + x_2 + 3 x_3 + x_4 + 3 x_5 + x_6 + 3 x_7 + x_8 + \\ 3 x_9  + x_{10} + 3 x_{11} + x_{12}) \equiv 0 \pmod {10} \end{split}\]</div>
-<p>em  que <span class="math notranslate nohighlight">\(\equiv \pmod{10}\)</span> indica que a expressão à esquerda é congruente a <span class="math notranslate nohighlight">\(0\)</span> módulo 10.</p>
-<p>Assim, se quiser obter manualmente o dígito de controlo para o código «03600029145x», farei:</p>
-<ul class="simple">
-<li><p>a soma de algarismo sim, algarismo não, multiplicando o resultado por 3</p></li>
-<li><p>a soma dos restantes algarismos (obtendo, neste caso, 58)</p></li>
-<li><p>determino o resto da divisão por 10 (que neste caso é 8)</p></li>
-<li><p>Se o resto fosse zero, o dígito de controlo seria 0; neste caso o dígito de controlo será <span class="math notranslate nohighlight">\(10-8\)</span>, portanto 2.</p></li>
-</ul>
-<p>Preciso de um programa para determinar o dígito de controlo.</p>
+<p>Neste fim de semana teremos a Eleição para a Presidência da República.
+Cada secção de voto, apurará os resultados dos candidatos e preciso do apuramento de votos de cada freguesia.</p>
+<p>A ordem com que os candidatos surgem no boletim eleitoral é já conhecida:
+Eduardo Nelson da Costa Baptista, Marisa Isabel dos Santos Matias, Marcelo Nuno Duarte Rebelo de Sousa, Tiago Pedro de Sousa Mayan Gonçalves, André Claro Amaral Ventura, Vitorino Francisco da Rocha e Silva, João Manuel Peixoto Ferreira e Ana Maria Rosa Martins Gomes.
+Os votos em Eduardo Nelson da Costa Baptista serão nulos mas até ao apuramento final nacional serão mantidos.</p>
+<p>Cada secção de voto apurará os votos de cada candidato, os brancos e os nulos e produzirá um ficheiro com o formato indicado em seguida, substituindo o 0 (zero) pelo valor adequado.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eduardo</span> <span class="n">Nelson</span> <span class="n">da</span> <span class="n">Costa</span> <span class="n">Baptista</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Marisa</span> <span class="n">Isabel</span> <span class="n">dos</span> <span class="n">Santos</span> <span class="n">Matias</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Marcelo</span> <span class="n">Nuno</span> <span class="n">Duarte</span> <span class="n">Rebelo</span> <span class="n">de</span> <span class="n">Sousa</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Tiago</span> <span class="n">Pedro</span> <span class="n">de</span> <span class="n">Sousa</span> <span class="n">Mayan</span> <span class="n">Gonçalves</span><span class="p">,</span><span class="mi">0</span> 
+<span class="n">André</span> <span class="n">Claro</span> <span class="n">Amaral</span> <span class="n">Ventura</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Vitorino</span> <span class="n">Francisco</span> <span class="n">da</span> <span class="n">Rocha</span> <span class="n">e</span> <span class="n">Silva</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">João</span> <span class="n">Manuel</span> <span class="n">Peixoto</span> <span class="n">Ferreira</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Ana</span> <span class="n">Maria</span> <span class="n">Rosa</span> <span class="n">Martins</span> <span class="n">Gomes</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Votos</span> <span class="n">brancos</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Votos</span> <span class="n">nulos</span><span class="p">,</span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>Cada frequesia tem um número variável de secções de voto.
+A ideia era que o programa aceitasse ficheiros com a designação geral <nome>*&lt;.extensão&gt;. Mas alguns não querem nome, outros não usam extensão, outros nem nome nem extensão. Enfim, acordou-se que cada freguesia escolherá a designação que pretender, sendo o número da secção será representado pelo caracter *.</p>
+<p>Preciso de consolidar essa informação e assim quero um programa que leia a designação geral do ficheiro e o número de ficheiros e apresente o resultado apurado.</p>
 <div class="section" id="tarefa-a">
-<h2>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h2>
-<p>Prepare um programa em Python completando que determine o dígito de controlo de um código universal de produto. O programa recebe, da consola, uma única linha contendo 11 carateres numéricos e a letra “x” e devolverá o dígito de controlo.</p>
+<h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
+<p>Faça um programa em Python que leia da consola uma linha com o nome genérico dos ficheiros e o número de secções.</p>
+<div class="section" id="input">
+<h4>Input<a class="headerlink" href="#input" title="Link permanente para este título">¶</a></h4>
+<p>O programa deverá ler da consola uma linha com o nome genérico dos ficheiros e o número de secções.</p>
+</div>
+<div class="section" id="output">
+<h4>Output<a class="headerlink" href="#output" title="Link permanente para este título">¶</a></h4>
+<p>O programa deverá escrever na consola o resultado apurado, com o mesmo formato di ficheiro lido e os valores totais.</p>
+</div>
+<div class="section" id="exemplo">
+<h4>Exemplo<a class="headerlink" href="#exemplo" title="Link permanente para este título">¶</a></h4>
+<p>Considere que tinha o ficheiro <em>Freguesia1.txt</em> com o conteúdo</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eduardo</span> <span class="n">Nelson</span> <span class="n">da</span> <span class="n">Costa</span> <span class="n">Baptista</span><span class="p">,</span><span class="mi">1</span>
+<span class="n">Marisa</span> <span class="n">Isabel</span> <span class="n">dos</span> <span class="n">Santos</span> <span class="n">Matias</span><span class="p">,</span><span class="mi">2</span>
+<span class="n">Marcelo</span> <span class="n">Nuno</span> <span class="n">Duarte</span> <span class="n">Rebelo</span> <span class="n">de</span> <span class="n">Sousa</span><span class="p">,</span><span class="mi">3</span>
+<span class="n">Tiago</span> <span class="n">Pedro</span> <span class="n">de</span> <span class="n">Sousa</span> <span class="n">Mayan</span> <span class="n">Gonçalves</span><span class="p">,</span><span class="mi">4</span> 
+<span class="n">André</span> <span class="n">Claro</span> <span class="n">Amaral</span> <span class="n">Ventura</span><span class="p">,</span><span class="mi">5</span>
+<span class="n">Vitorino</span> <span class="n">Francisco</span> <span class="n">da</span> <span class="n">Rocha</span> <span class="n">e</span> <span class="n">Silva</span><span class="p">,</span><span class="mi">6</span>
+<span class="n">João</span> <span class="n">Manuel</span> <span class="n">Peixoto</span> <span class="n">Ferreira</span><span class="p">,</span><span class="mi">7</span>
+<span class="n">Ana</span> <span class="n">Maria</span> <span class="n">Rosa</span> <span class="n">Martins</span> <span class="n">Gomes</span><span class="p">,</span><span class="mi">8</span>
+<span class="n">Votos</span> <span class="n">brancos</span><span class="p">,</span><span class="mi">9</span>
+<span class="n">Votos</span> <span class="n">nulos</span><span class="p">,</span><span class="mi">10</span>
+</pre></div>
+</div>
+<p>e o ficheiro <em>Freguesia2.txt</em> com o conteúdo</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eduardo</span> <span class="n">Nelson</span> <span class="n">da</span> <span class="n">Costa</span> <span class="n">Baptista</span><span class="p">,</span><span class="mi">9</span>
+<span class="n">Marisa</span> <span class="n">Isabel</span> <span class="n">dos</span> <span class="n">Santos</span> <span class="n">Matias</span><span class="p">,</span><span class="mi">8</span>
+<span class="n">Marcelo</span> <span class="n">Nuno</span> <span class="n">Duarte</span> <span class="n">Rebelo</span> <span class="n">de</span> <span class="n">Sousa</span><span class="p">,</span><span class="mi">7</span>
+<span class="n">Tiago</span> <span class="n">Pedro</span> <span class="n">de</span> <span class="n">Sousa</span> <span class="n">Mayan</span> <span class="n">Gonçalves</span><span class="p">,</span><span class="mi">6</span>
+<span class="n">André</span> <span class="n">Claro</span> <span class="n">Amaral</span> <span class="n">Ventura</span><span class="p">,</span><span class="mi">5</span>
+<span class="n">Vitorino</span> <span class="n">Francisco</span> <span class="n">da</span> <span class="n">Rocha</span> <span class="n">e</span> <span class="n">Silva</span><span class="p">,</span><span class="mi">4</span>
+<span class="n">João</span> <span class="n">Manuel</span> <span class="n">Peixoto</span> <span class="n">Ferreira</span><span class="p">,</span><span class="mi">3</span>
+<span class="n">Ana</span> <span class="n">Maria</span> <span class="n">Rosa</span> <span class="n">Martins</span> <span class="n">Gomes</span><span class="p">,</span><span class="mi">2</span>
+<span class="n">Votos</span> <span class="n">brancos</span><span class="p">,</span><span class="mi">1</span>
+<span class="n">Votos</span> <span class="n">nulos</span><span class="p">,</span><span class="mi">0</span>
+</pre></div>
+</div>
+<p><strong>Input 1</strong></p>
+<p>Freguesia*.txt 2</p>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eduardo</span> <span class="n">Nelson</span> <span class="n">da</span> <span class="n">Costa</span> <span class="n">Baptista</span><span class="p">,</span><span class="mi">10</span>
+<span class="n">Marisa</span> <span class="n">Isabel</span> <span class="n">dos</span> <span class="n">Santos</span> <span class="n">Matias</span><span class="p">,</span><span class="mi">10</span>
+<span class="n">Marcelo</span> <span class="n">Nuno</span> <span class="n">Duarte</span> <span class="n">Rebelo</span> <span class="n">de</span> <span class="n">Sousa</span><span class="p">,</span><span class="mi">10</span>
+<span class="n">Tiago</span> <span class="n">Pedro</span> <span class="n">de</span> <span class="n">Sousa</span> <span class="n">Mayan</span> <span class="n">Gonçalves</span><span class="p">,</span><span class="mi">10</span>
+<span class="n">André</span> <span class="n">Claro</span> <span class="n">Amaral</span> <span class="n">Ventura</span><span class="p">,</span><span class="mi">10</span>
+<span class="n">Vitorino</span> <span class="n">Francisco</span> <span class="n">da</span> <span class="n">Rocha</span> <span class="n">e</span> <span class="n">Silva</span><span class="p">,</span><span class="mi">10</span>
+<span class="n">João</span> <span class="n">Manuel</span> <span class="n">Peixoto</span> <span class="n">Ferreira</span><span class="p">,</span><span class="mi">10</span>
+<span class="n">Ana</span> <span class="n">Maria</span> <span class="n">Rosa</span> <span class="n">Martins</span> <span class="n">Gomes</span><span class="p">,</span><span class="mi">10</span>
+<span class="n">Votos</span> <span class="n">brancos</span><span class="p">,</span><span class="mi">10</span>
+<span class="n">Votos</span> <span class="n">nulos</span><span class="p">,</span><span class="mi">10</span>
+</pre></div>
+</div>
+<p>Submeta na tarefa A.</p>
+</div>
+</div>
+</div>
+<div class="section" id="triangulo-de-pascal">
+<h2>Triângulo de Pascal<a class="headerlink" href="#triangulo-de-pascal" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/TrianguloPascal.jpg"><img alt="../_images/TrianguloPascal.jpg" src="../_images/TrianguloPascal.jpg" style="height: 300px;" /></a>
+</div>
+<p>O <a class="reference external" href="https://mathworld.wolfram.com/PascalsTriangle.html">triângulo de Pascal</a> é uma representação gráfica usada determinação de coeficientes polinomiais na expansão de binómios.</p>
+<p>A fórmula geral para a determinação dos coeficientes é dada por</p>
+<div class="math notranslate nohighlight">
+\[ C_{n,k} = \binom{n}{k} = \frac{n!}{k!(n-k)!}\]</div>
+<p>para <span class="math notranslate nohighlight">\( n \)</span> e <span class="math notranslate nohighlight">\( k \)</span> inteiros positivos e <span class="math notranslate nohighlight">\( k \in [0, n] \)</span>.</p>
+<div class="section" id="tarefa">
+<h3>Tarefa<a class="headerlink" href="#tarefa" title="Link permanente para este título">¶</a></h3>
+<p>Faça um programa que leia da consola um número inteiro <span class="math notranslate nohighlight">\(n\)</span> e apresente os coeficientes para a expansão de um binómio de grau <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<div class="section" id="id2">
+<h4>Input<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h4>
+<p>O programa deve ler da consola um número inteiro.</p>
+</div>
+<div class="section" id="id3">
+<h4>Output<a class="headerlink" href="#id3" title="Link permanente para este título">¶</a></h4>
+<p>O programa deverá apresentar na consola, numa mesma linha, os coeficientes separados por espaços.</p>
 </div>
 <div class="section" id="exemplos">
-<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
+<h4>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h4>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">03600029145</span><span class="n">x</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
 </pre></div>
 </div>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">03600024145</span><span class="n">x</span>
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span>
 </pre></div>
 </div>
-<p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">01234567895</span><span class="n">x</span>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">7</span> <span class="mi">21</span> <span class="mi">35</span> <span class="mi">35</span> <span class="mi">21</span> <span class="mi">7</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
-</pre></div>
-</div>
-<p>Submeta no problema A.</p>
+<p>Submeta na tarefa B.</p>
 </div>
 </div>
-<div class="section" id="eficacia">
-<h1>Eficácia<a class="headerlink" href="#eficacia" title="Link permanente para este título">¶</a></h1>
-<div class="figure align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/eficacia.jpeg"><img alt="../_images/eficacia.jpeg" src="../_images/eficacia.jpeg" style="height: 300px;" /></a>
 </div>
-<p>Pretende-se proceder à avaliação de uma experiência. Cada um de <em>n</em> produtos é ensaiado num número indeterminado de amostras.</p>
-<p>A eficácia de um produto numa amostra é marcada com <em>1</em> se o produto é eficaz ou <em>0</em> se o produto não é eficaz. Para já, considera-se a eficácia do produto como a média aritmética  dos resultados desse produto nas diferentes amostras.</p>
-<p>Pretendo uma listagem ordenada dos produtos que têm uma eficácia superior a um valor <em>v</em>.</p>
-<div class="section" id="tarefa-b">
-<h2>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h2>
-<p>Prepare um programa em Python para produzir a listagem pretendida.</p>
-<p>O seu programa deve ler, numa primeira linha, um número inteiro e um número real separados por espaços, números esses que correspondem ao número de produtos <em>n</em> e ao patamar de eficiência <em>v</em>, respetivamente.
-As <em>n</em> linhas seguintes contêm a informação de cada produto sendo que em cada linha surgem, separados por vírgulas, o nome do produto e a eficácia desse produto em cada uma das amostras.</p>
-<p>O seu programa deve produzir uma listagem dos produtos onde se verificou uma eficácia superior ou igual ao patamar <em>v</em>. Nessa listagem, os produtos devem surgir por ordem alfabética e apenas um por linha.
-Caso não existam produtos a apresentar o seu programa deverá apresentar a mensagem «Não há produtos com a eficácia pretendida.» (sem as aspas).</p>
-<p><strong>Requisito técnico</strong>: deve usar, pelo menos, um dicionário.</p>
-<div class="section" id="id2">
-<h3>Exemplos<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h3>
+<div class="section" id="conjetura-de-collatz">
+<h2>Conjetura de Collatz<a class="headerlink" href="#conjetura-de-collatz" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="collatz-conjecture">
+<a class="reference internal image-reference" href="../_images/Collatz_conjecture.png"><img alt="../_images/Collatz_conjecture.png" src="../_images/Collatz_conjecture.png" style="height: 300px;" /></a>
+</div>
+<p>Fonte da figura: https://imgs.xkcd.com/comics/collatz_conjecture.png</p>
+<p>Considere a função</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} f(x_n)=\begin{cases}
+			 \frac{1}{2}x_{n-1} &amp; \textrm{se $x_{n-1}$ for um número par}\\
+			 3x_{n-1}+1        &amp; \textrm{se $x_{n-1}$ for ímpar} 
+	     	 \end{cases}
+\end{split}\]</div>
+<p><a class="reference external" href="https://mathworld.wolfram.com/CollatzProblem.html">Collatz</a> conjeturou se a aplicação sucessiva dessa função terminaria sempre com o valor de <span class="math notranslate nohighlight">\(1\)</span> (um) para valores iniciais positivos.</p>
+<div class="section" id="id4">
+<h3>Tarefa<a class="headerlink" href="#id4" title="Link permanente para este título">¶</a></h3>
+<p>Queremos testar a conjetura de Collatz, determinando ao fim de quantos passos se atinge o número <span class="math notranslate nohighlight">\(1\)</span> (um) e qual o maior valor da sequência.</p>
+<div class="section" id="id5">
+<h4>Input<a class="headerlink" href="#id5" title="Link permanente para este título">¶</a></h4>
+<p>O programa deve ler da consola um número inteiro.</p>
+</div>
+<div class="section" id="id6">
+<h4>Output<a class="headerlink" href="#id6" title="Link permanente para este título">¶</a></h4>
+<p>O programa deve apresentar na consola, numa mesma linha e separados pelo espaço, ao fim de quantos passos se atingiu o valor unitário e o maior valor da sequência.</p>
+</div>
+<div class="section" id="id7">
+<h4>Exemplos<a class="headerlink" href="#id7" title="Link permanente para este título">¶</a></h4>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="mf">0.3</span>
-<span class="n">Silicato</span> <span class="n">de</span> <span class="n">sódio</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Oxido</span> <span class="n">de</span> <span class="n">chumbo</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
-<span class="n">Acetato</span> <span class="n">de</span> <span class="n">chumbo</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
 </pre></div>
 </div>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Acetato</span> <span class="n">de</span> <span class="n">chumbo</span>
-<span class="n">Oxido</span> <span class="n">de</span> <span class="n">chumbo</span>
-<span class="n">Silicato</span> <span class="n">de</span> <span class="n">sódio</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="mf">0.5</span>
-<span class="n">Carbonato</span> <span class="n">de</span> <span class="n">bário</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
-<span class="n">Violeta</span> <span class="n">de</span> <span class="n">genciana</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Cloreto</span> <span class="n">de</span> <span class="n">cálcio</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Acetona</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Azul</span> <span class="n">de</span> <span class="n">metileno</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
 </pre></div>
 </div>
 <p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Acetona</span>
-<span class="n">Azul</span> <span class="n">de</span> <span class="n">metileno</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span>
 </pre></div>
 </div>
 <p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="mf">0.7</span>
-<span class="n">Carbonato</span> <span class="n">de</span> <span class="n">bário</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
-<span class="n">Violeta</span> <span class="n">de</span> <span class="n">genciana</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Cloreto</span> <span class="n">de</span> <span class="n">cálcio</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Acetona</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Azul</span> <span class="n">de</span> <span class="n">metileno</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
 </pre></div>
 </div>
 <p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Não</span> <span class="n">há</span> <span class="n">produtos</span> <span class="n">com</span> <span class="n">a</span> <span class="n">eficácia</span> <span class="n">pretendida</span><span class="o">.</span>
-</pre></div>
-</div>
-<p>Submeta no problema B.</p>
-</div>
-</div>
-</div>
-<div class="section" id="maior-subida-de-temperatura">
-<h1>Maior subida de temperatura<a class="headerlink" href="#maior-subida-de-temperatura" title="Link permanente para este título">¶</a></h1>
-<div class="figure align-default" id="subida-de-temperatura">
-<a class="reference internal image-reference" href="../_images/subida-temperatura.jpeg"><img alt="../_images/subida-temperatura.jpeg" src="../_images/subida-temperatura.jpeg" style="height: 300px;" /></a>
-</div>
-<p>Porque muitas das nossas experiências que funcionaram de forma anómala dependem da temperatura, passámos então a recolher a temperatura no laboratório de hora a hora.
-Houve alturas em que se verificou uma sequência crescente, ou seja, um conjunto de medidas T em que <span class="math notranslate nohighlight">\(t_n &lt; t_{n+1}\)</span>.
-Para analisarmos a evolução das temperaturas, queremos identificar a maior amplitude das sequências crescentes de temperatura.</p>
-<div class="section" id="tarefa-c">
-<h2>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h2>
-<p>Dada uma série de medidas de temperatura obtidas durante a realização de uma experiência, pretende-se identificar qual a maior amplitude das sequências crescentes de temperatura.</p>
-<p>O seu programa deve ler, da consola, uma única linha contendo números reais separados por espaços.</p>
-<p>O programa deve apresentar um número real com 4 casas decimais que corresponde à maior amplitude das sequências crescentes.</p>
-<div class="section" id="exemplo">
-<h3>Exemplo<a class="headerlink" href="#exemplo" title="Link permanente para este título">¶</a></h3>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">26.79</span> <span class="mf">26.76</span> <span class="mf">26.62</span> <span class="mf">26.12</span> <span class="mf">25.47</span> <span class="mf">30.12</span> <span class="mf">30.18</span> <span class="mf">30.65</span> <span class="mf">32.07</span> <span class="mf">32.13</span> <span class="mf">33.17</span> <span class="mf">32.83</span> <span class="mf">32.89</span> <span class="mf">35.47</span> <span class="mf">35.91</span> <span class="mf">37.34</span> <span class="mf">37.62</span> <span class="mf">36.89</span>
-</pre></div>
-</div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">7.7000</span>
-</pre></div>
-</div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
-
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.0000</span>
-</pre></div>
-</div>
-<p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.0</span> <span class="mf">27.0</span>
-</pre></div>
-</div>
-<p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">27.0000</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="mi">16</span>
 </pre></div>
 </div>
 <p><strong>Input 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">27.0</span> <span class="mf">0.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
 </pre></div>
 </div>
 <p><strong>Output 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.0000</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="mi">4</span>
 </pre></div>
 </div>
 <p><strong>Input 5</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span> <span class="o">-</span><span class="mi">5</span> <span class="o">-</span><span class="mi">4</span> <span class="o">-</span><span class="mi">3</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">22</span> <span class="mi">27</span> <span class="mi">0</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span>
 </pre></div>
 </div>
 <p><strong>Output 5</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">32.0000</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="mi">16</span>
 </pre></div>
 </div>
-<p><strong>Input 6</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="o">-</span><span class="mi">5</span> <span class="o">-</span><span class="mi">4</span> <span class="o">-</span><span class="mi">3</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">22</span> <span class="mi">27</span> <span class="mi">0</span>
-</pre></div>
+<p>Submeta na tarefa C.</p>
 </div>
-<p><strong>Output 6</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">32.0000</span>
-</pre></div>
-</div>
-<p>Submeta no problema C.</p>
 </div>
 </div>
 </div>
@@ -559,13 +621,15 @@ Para analisarmos a evolução das temperaturas, queremos identificar a maior amp
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Lab7.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Lab7</p>
+        </div>
+    </a>
 </div>
         
         </div>
@@ -586,8 +650,7 @@ Para analisarmos a evolução das temperaturas, queremos identificar a maior amp
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

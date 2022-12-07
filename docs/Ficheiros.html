@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ficheiros &#8212; Introdução à programação</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -54,8 +54,13 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IP-2022-23/docs/Ficheiros.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Primeiros passos na programação em Python" href="Primeiros_passos.html" />
+    <link rel="prev" title="Tuplos, conjuntos e dicionários" href="ProgPython4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -94,7 +99,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preâmbulo
  </span>
@@ -106,12 +111,12 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Resumos dos temas
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
    Introdução
@@ -147,8 +152,13 @@
    Tuplos, conjuntos e dicionários
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Ficheiros
+  </a>
+ </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Guiões práticos
  </span>
@@ -207,6 +217,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Lab7.html">
    Lab7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab8.html">
+   Lab8
   </a>
  </li>
 </ul>
@@ -322,23 +337,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#escrever-informacao-num-ficheiro">
    Escrever informação num ficheiro
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercicio-exemplificativo">
-   Exercício exemplificativo
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extrair-informacao">
-     Extrair informação
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercicios">
-   Exercícios
   </a>
  </li>
 </ul>
@@ -593,98 +591,6 @@ Para uma escrita bem sucedida há que ter em atenção que:</p>
 </div>
 </div>
 </div>
-<div class="section" id="exercicio-exemplificativo">
-<h2>Exercício exemplificativo<a class="headerlink" href="#exercicio-exemplificativo" title="Link permanente para este título">¶</a></h2>
-<p>(adaptado de <a class="reference external" href="https://justinbois.github.io/bootcamp/2020/lessons/l11_file_io.html">Introduction to Programming in the Biological Sciences Bootcamp - Lesson 11</a>, (c)2020 Justin Bois, CC-BY 4.0)</p>
-<p>Considere o ficheiro 10LG.pdb, de <a class="reference external" href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1olg">Protein Databank</a> com informação sobre a proteína <a class="reference external" href="https://pt.wikipedia.org/wiki/P53">p53</a>.</p>
-<p>Se o ficheiro não estiver na directoria corrente, descarregamos.
-Para isso, precisamos do módulo <code class="docutils literal notranslate"><span class="pre">wget</span></code>. Se não estiver disponível, há que o obter.</p>
-<p>Procure esse método no navegador da distribuição Anaconda e selecione a sua instalação.
-Ou, em alternativa, na <em>Anaconda command prompt</em> faça
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">wget</span></code>
-ou
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">wget</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">wget</span><span class="o">,</span> <span class="nn">os</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># help(wget.download)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;1OLG.pdb&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">():</span>
-    <span class="n">wget</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;http://files.rcsb.org/download/1OLG.pdb&quot;</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="s2">&quot;1OLG.pdb&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="extrair-informacao">
-<h3>Extrair informação<a class="headerlink" href="#extrair-informacao" title="Link permanente para este título">¶</a></h3>
-<p>Queremos isolar os registos ATOM da primeira cadeia e escrevê-los para um novo ficheiro.</p>
-<p>Consultando a <a class="reference external" href="http://www.wwpdb.org/documentation/file-format-content/format33/sect9.html#ATOM">especificação do formato PDB</a>, notamos que a coluna 22 nas linhas <em>ATOM</em> correspondem ao <em>ID</em> da cadeia (que corresponderá à posição 21 da <em>string</em> em Python).</p>
-<p>Podemos usar mais que um ficheiro no bloco <em>with</em> e usamos um ficheiro para a leitura e outro para a escrita.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;1OLG.pdb&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;atoms_chain_A.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_out</span><span class="p">:</span>
-    <span class="c1"># Put the ATOM lines from chain A in new file</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f_in</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">21</span> <span class="ow">and</span> <span class="n">line</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ATOM&#39;</span> <span class="ow">and</span> <span class="n">line</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">:</span>
-            <span class="n">f_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Vejamos as primeiras 10 linhas.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;atoms_chain_A.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">9</span><span class="p">:</span>
-            <span class="k">break</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ATOM      1  N   LYS A 319      18.634  25.437  10.685  1.00  4.81           N  
-
-ATOM      2  CA  LYS A 319      17.984  25.295   9.354  1.00  4.32           C  
-
-ATOM      3  C   LYS A 319      18.160  23.876   8.818  1.00  3.74           C  
-
-ATOM      4  O   LYS A 319      19.259  23.441   8.537  1.00  3.67           O  
-
-ATOM      5  CB  LYS A 319      18.609  26.282   8.371  1.00  4.67           C  
-
-ATOM      6  CG  LYS A 319      18.003  26.056   6.986  1.00  5.15           C  
-
-ATOM      7  CD  LYS A 319      16.476  26.057   7.091  1.00  5.90           C  
-
-ATOM      8  CE  LYS A 319      16.014  27.341   7.784  1.00  6.51           C  
-
-ATOM      9  NZ  LYS A 319      16.388  28.518   6.952  1.00  7.33           N  
-
-ATOM     10  H1  LYS A 319      18.414  24.606  11.281  1.00  5.09           H  
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="exercicios">
-<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link permanente para este título">¶</a></h2>
-<p>Quantos elementos diferentes existem nesta cadeia?</p>
-<p>Que elementos são?</p>
-<p>Quantos átomos de cada elemento existem?</p>
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -710,13 +616,22 @@ ATOM     10  H1  LYS A 319      18.414  24.606  11.281  1.00  5.09           H
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="ProgPython4.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Tuplos, conjuntos e dicionários</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Primeiros_passos.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Primeiros passos na programação em Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
@@ -737,8 +652,7 @@ ATOM     10  H1  LYS A 319      18.414  24.606  11.281  1.00  5.09           H
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
