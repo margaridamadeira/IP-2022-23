@@ -25,7 +25,7 @@ for x in range(0, 100, 20):
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m/tmp/ipykernel_8841/51138806.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_6237/51138806.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0;32mimport[0m [0mtemperaturas[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0;34m[0m[0m
 [1;32m      3[0m [0;32mfor[0m [0mx[0m [0;32min[0m [0mrange[0m[0;34m([0m[0;36m0[0m[0;34m,[0m [0;36m100[0m[0;34m,[0m [0;36m20[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
