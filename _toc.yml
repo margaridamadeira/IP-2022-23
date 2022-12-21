@@ -35,5 +35,7 @@ parts:
   - file: docs/F2-2022-A.md
 # - file: docs/Lab9
 # - file: docs/F3-2122
+  - file: docs/F1R-2022.md
+  - file: docs/F2R-2022.md
 
 
