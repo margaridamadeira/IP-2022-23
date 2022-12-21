@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segunda festa (M) &#8212; Introdução à programação</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IP-2022-23/docs/F2R-2022.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IniciarProgramar.html">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython2.html">
+   Strings: indexação e controlo de execução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython3.html">
+   Listas, leitura e escrita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M%C3%B3dulosTestes.html">
+   Criação de soluções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython4.html">
+   Tuplos, conjuntos e dicionários
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ficheiros.html">
+   Ficheiros
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primeiros_passos.html">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab3.html">
+   Lab3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab4.html">
+   Lab4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab5.html">
+   Lab5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="F1-2022.html">
+   Primeira festa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab6.html">
+   Lab6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab7.html">
+   Lab7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab8.html">
+   Lab8
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="F2-2022-A.html">
+   Segunda festa
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/F2R-2022.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducao-a-programacao">
+   Introdução à programação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matematica-aplicada-a-economia-e-gestao">
+   Matemática Aplicada à Economia e Gestão
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#avaliacao-21-de-dezembro-de-2022">
+     Avaliação - 21 de dezembro de 2022
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#noves-fora">
+   Noves fora
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-a">
+     Tarefa A
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#produtos">
+   Produtos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa">
+     Tarefa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplos">
+     Exemplos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tarefa-c">
+       Tarefa C
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="segunda-festa-m">
+<h1>Segunda festa (M)<a class="headerlink" href="#segunda-festa-m" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="introducao-a-programacao">
+<h2>Introdução à programação<a class="headerlink" href="#introducao-a-programacao" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="matematica-aplicada-a-economia-e-gestao">
+<h2>Matemática Aplicada à Economia e Gestão<a class="headerlink" href="#matematica-aplicada-a-economia-e-gestao" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="avaliacao-21-de-dezembro-de-2022">
+<h3>Avaliação - 21 de dezembro de 2022<a class="headerlink" href="#avaliacao-21-de-dezembro-de-2022" title="Link permanente para este título">¶</a></h3>
+<hr>
+Note bem:
+<ul class="simple">
+<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IP_F2R do <em>Mooshak</em> em http://deei-mooshak.ualg.pt/~mmadeira</p></li>
+<li><p>A cotação das submissões aceites no <em>Mooshak</em>: tarefas A e B: 35 pontos cada; tarefa C: 20 pontos.</p></li>
+</ul>
+<hr>
+</div>
+</div>
+<div class="section" id="noves-fora">
+<h2>Noves fora<a class="headerlink" href="#noves-fora" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="prova-dos-nove">
+<a class="reference internal image-reference" href="../_images/Fig1.png"><img alt="../_images/Fig1.png" src="../_images/Fig1.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Ilustração da <em>prova dos noves</em> na adição</span><a class="headerlink" href="#prova-dos-nove" title="Permalink to this image">¶</a></p>
+</div>
+<p>Antigamente, na escola primária, para verificarmos rapidamente se uma operação aritmética estava certa, fazíamos a <em>prova dos nove</em>. Acho que nos pediam isso para fomentar o cálculo mental, porque a prova dos noves não garante a correção da operação.</p>
+<p>Na base dessa <em>prova dos noves</em>, fazíamos «noves fora», ou seja, íamos somando os algarismos e quando o resultado fosse nove, consideramos zero e continuamos a somar os algarismos até termos um único algarismo.</p>
+<p>Passamos então a designar por <code class="docutils literal notranslate"><span class="pre">9f</span></code> a função que faz «noves fora» a um número natural.
+Com exemplos é mais claro:</p>
+<p><code class="docutils literal notranslate"><span class="pre">9f(13)</span></code> = 4  porque 1 + 3</p>
+<p><code class="docutils literal notranslate"><span class="pre">9f(325)</span></code> = 1 porque 3 + 2 + 5 = 10 e 1 + 0 = 1</p>
+<p><code class="docutils literal notranslate"><span class="pre">9f(7234)</span></code> = 7 porque 7 + 2 + 3 + 4 = 16 e 1 + 6 = 7</p>
+<p>Usávamos a prova dos noves para verificar adições, subtrações, multiplicações ou divisões.
+Numa adição, em que <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">c</span></code>, a prova consistia em verificar que noves fora das parcelas era igual a noves fora do resultado.</p>
+<p>Por exemplo, para verificar <code class="docutils literal notranslate"><span class="pre">13</span> <span class="pre">+</span> <span class="pre">325</span> <span class="pre">=</span> <span class="pre">338</span></code> verificávamos <code class="docutils literal notranslate"><span class="pre">9f(13)</span> <span class="pre">+</span> <span class="pre">9f(325)</span> <span class="pre">=</span> <span class="pre">9f(338)</span></code>, que é o mesmo que verificar que <code class="docutils literal notranslate"><span class="pre">9f(13325)</span> <span class="pre">=</span> <span class="pre">9f(338)</span></code>.</p>
+<div class="section" id="tarefa-a">
+<h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
+<p>Pretende-se usar a <em>prova dos noves</em> para analisar uma expressão.</p>
+<p>O input é uma única linha onde dois termos estão separados pelo sinal de igual («=», sem as aspas). O primeiro termo é composto por duas ou mais parcelas, sendo as parcelas separadas pelo sinal de soma (“+”, sem as aspas). O segundo termo representa a soma. As parcelas e a soma são formadas pelos caracteres correspondentes aos algarismos de zero a nove.</p>
+<p>O output é uma única linha onde se apresenta a expressão lida seguida por » -&gt; corresponde» ou » -&gt; não corresponde» (sem as aspas) conforme se verifica ou não a igualdade da <em>prova dos noves</em>, respetivamente.</p>
+<p><strong>Requisito técnico:</strong> Não é permitido o uso de subtração, divisão (inteira ou real) ou resto da divisão inteira.</p>
+<p><strong>Casos de teste</strong></p>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">254</span><span class="o">+</span><span class="mi">325</span><span class="o">=</span><span class="mi">579</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">254</span><span class="o">+</span><span class="mi">325</span><span class="o">=</span><span class="mi">579</span> <span class="o">-&gt;</span> <span class="n">corresponde</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span><span class="o">+</span><span class="mi">45</span><span class="o">+</span><span class="mi">67</span><span class="o">=</span><span class="mi">124</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span><span class="o">+</span><span class="mi">45</span><span class="o">+</span><span class="mi">67</span><span class="o">=</span><span class="mi">124</span> <span class="o">-&gt;</span> <span class="n">corresponde</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">5</span><span class="o">=</span><span class="mi">7</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">5</span><span class="o">=</span><span class="mi">7</span> <span class="o">-&gt;</span> <span class="n">não</span> <span class="n">corresponde</span>
+</pre></div>
+</div>
+<p>Submeta na tarefa A.</p>
+<div style="page-break-after: always"></div>
+</div>
+</div>
+<div class="section" id="produtos">
+<h2>Produtos<a class="headerlink" href="#produtos" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="reagentes">
+<a class="reference internal image-reference" href="../_images/reagentes-quimicos.jpg"><img alt="../_images/reagentes-quimicos.jpg" src="../_images/reagentes-quimicos.jpg" style="height: 300px;" /></a>
+</div>
+<p>Quero organizar o stock do laboratório e vou usar o código universal de produtos.</p>
+<p>O código universal de produtos prevê números com 12 dígitos numéricos e o dígito da direita é o dígito de controlo. Formalmente, um número de produto é correto sse</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} (3 x_1 + x_2 + 3 x_3 + x_4 + 3 x_5 + x_6 + 3 x_7 + x_8 + \\ 3 x_9  + x_{10} + 3 x_{11} + x_{12}) \equiv 0 \pmod {10} \end{split}\]</div>
+<p>em  que <span class="math notranslate nohighlight">\(\equiv \pmod{10}\)</span> indica que a expressão à esquerda é congruente a <span class="math notranslate nohighlight">\(0\)</span> módulo 10.</p>
+<p>Assim, se quiser obter manualmente o dígito de controlo para o código «03600029145x», farei:</p>
+<ul class="simple">
+<li><p>a soma de algarismo sim, algarismo não, multiplicando o resultado por 3</p></li>
+<li><p>a soma dos restantes algarismos (obtendo, neste caso, 58)</p></li>
+<li><p>determino o resto da divisão por 10 (que neste caso é 8)</p></li>
+<li><p>Se o resto fosse zero, o dígito de controlo seria 0; neste caso o dígito de controlo será <span class="math notranslate nohighlight">\(10-8\)</span>, portanto 2.</p></li>
+</ul>
+<p>Preciso de um programa para determinar o dígito de controlo.</p>
+<div class="section" id="tarefa">
+<h3>Tarefa<a class="headerlink" href="#tarefa" title="Link permanente para este título">¶</a></h3>
+<p>Prepare um programa em Python que determine o dígito de controlo de um código universal de produto. O programa recebe, da consola, uma única linha contendo 11 carateres numéricos e a letra “x” e devolverá o dígito de controlo.</p>
+</div>
+<div class="section" id="exemplos">
+<h3>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h3>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">03600029145</span><span class="n">x</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">03600024145</span><span class="n">x</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">01234567895</span><span class="n">x</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>Submeta na tarefa B.</p>
+<div class="section" id="tarefa-c">
+<h4>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h4>
+<p>Considere o enunciado do Lab7, tarefa C.</p>
+<p>Prepare um programa em Python que apresente o preço médio de cada tipo de combustível.
+A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dados. Cada linha de dados contém três campos, separados por “;” e delimitados por “»”; a informação nesses campos corresponde respetivamente à data, ao tipo de combustível e ao preço do combustível. O formato usado no preço inclui a vírgula como separador decimal e o símbolo da moeda usada (€).</p>
+<p>O output é composto por tantas linhas quantos os tipos de combustível e cada linha contém a designação do tipo de combustível seguida por «: » (sem as aspas) e o valor médio desse tipo de combustível.</p>
+<p><strong>Requisito técnico</strong>: carregue os dados lidos para um dicionário onde o tipo de combustível é a chave e associado à chave está uma lista com os preços desse tipo de combustível.</p>
+<p>Sugestão de resolução:</p>
+<ul class="simple">
+<li><p>Implemente uma função que receba uma string e um número real e os apresente no formato pretendido.</p></li>
+<li><p>Implemente uma função que receba uma lista e devolva o valor médio dos elementos dessa lista.</p></li>
+<li><p>Implemente uma função que receba uma linha lida e guarde, num dicionário, o preço na coleção de valores associados à chave que é a designação do tipo de combustível.</p></li>
+<li><p>Implemente uma função que receba um dicionário e, para cada chave do dicionário, obtenha a média dos valores e apresente a chave e valor.</p></li>
+</ul>
+<p>Considere usar os esboços seguintes:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def mostra_combustivel_valor(tipo: str, valor: float) -&gt; None:
+    &quot;&quot;&quot;
+    Apresenta o tipo de combustível e o valor.
+
+    Parameters
+    ----------
+    tipo : str
+        O tipo de combustível
+    valor : float
+        o valor a apresentar
+
+    &gt;&gt;&gt; mostra_combustivel_valor(&#39;Exemplo de tipo de combustível&#39;, 3.5)
+    Exemplo de tipo de combustível: 3.5
+    &quot;&quot;&quot;
+    pass
+
+
+
+def calcula_média(lista: list) -&gt; float:
+    &quot;&quot;&quot;
+    Devolve a média de uma lista de valores numéricos.
+
+    Parameters
+    ----------
+    lista : list
+        Uma lista não nula de valores numéricos.
+
+    Returns
+    -------
+    float
+        A média aritmética dos valores da lista.
+
+    &gt;&gt;&gt; calcula_média([3])
+    3
+    &gt;&gt;&gt; calcula_média([3, 5])
+    4
+    &gt;&gt;&gt; calcula_média([3, 5.0, 12, -1])
+    4.75
+    &quot;&quot;&quot;
+    pass
+
+
+def guarda_no_dicionário(dicio: dict, tipo: str, valor: float) -&gt; dict:
+    &quot;&quot;&quot;
+    Guarda no dicionário o valor associado à chave representada pelo tipo.
+    
+    Se a chave não existir, cria essa chave e associa uma lista com o valor;
+    se a chave existir, acrescenta o valor à lista associada a essa chave.
+
+    Parameters
+    ----------
+    tipo : str
+        DESCRIPTION.
+    valor : real
+        DESCRIPTION.
+
+    &gt;&gt;&gt; guarda_no_dicionário({}, &quot;Gasóleo&quot;, 0.7)
+    {&#39;Gasóleo&#39;: [0.7]}
+    &gt;&gt;&gt; guarda_no_dicionário({&#39;Gasóleo&#39;: [0.7]}, &quot;Gasóleo&quot;, 0.8)
+    {&#39;Gasóleo&#39;: [0.7, 0.8]}
+    &gt;&gt;&gt; guarda_no_dicionário({&#39;Gasóleo&#39;: [0.7, 0.8]}, &quot;Gasolina&quot;, 1.2)
+    {&#39;Gasóleo&#39;: [0.7, 0.8], &#39;Gasolina&#39;: [1.2]}
+    &quot;&quot;&quot;
+    pass
+
+
+def mostra_resultado(dicio: dict) -&gt; None:
+    &quot;&quot;&quot;Percorre o dicionário para produzir a listagem desejada.
+    
+    &gt;&gt;&gt; mostra_resultado({&#39;Gasóleo&#39;: [0.7]})
+    Gasóleo: 0.7
+    &gt;&gt;&gt; mostra_resultado({&#39;Gasóleo&#39;: [0.7, 0.8], &#39;Gasolina&#39;: [1.2]})
+    Gasóleo: 0.75
+    Gasolina: 1.2
+    &quot;&quot;&quot;
+    pass
+</pre></div>
+</div>
+<p>Submeta na tarefa C.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
