@@ -56,6 +56,8 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IP-2022-23/docs/F1R-2022.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Segunda festa (M)" href="F2R-2022.html" />
+    <link rel="prev" title="Segunda festa" href="F2-2022-A.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -160,7 +162,7 @@
   Guiões práticos
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -224,6 +226,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="F2-2022-A.html">
    Segunda festa
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Primeira festa (M)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="F2R-2022.html">
+   Segunda festa (M)
   </a>
  </li>
 </ul>
@@ -320,8 +332,8 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-b">
-     Tarefa B
+    <a class="reference internal nav-link" href="#tarefa-a">
+     Tarefa A
     </a>
    </li>
   </ul>
@@ -332,7 +344,7 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#tarefa-b">
      Tarefa B
     </a>
    </li>
@@ -384,13 +396,13 @@ Note bem:
 <h2>Gerar senhas<a class="headerlink" href="#gerar-senhas" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="p4assw0rd">
 <a class="reference internal image-reference" href="../_images/codigos.png"><img alt="../_images/codigos.png" src="../_images/codigos.png" style="height: 200px;" /></a>
-<p class="caption"><span class="caption-text">Password secreta</span><a class="headerlink" href="#p4assw0rd" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Password secreta</span><a class="headerlink" href="#p4assw0rd" title="Permalink to this image">¶</a></p>
 </div>
 <p>Isto de inventar senhas, todas diferentes, tem muito que se lhe diga. Vou passar a criar uma senha a partir de uma frase, idealmente associada ao serviço onde me quero autenticar.</p>
 <p>Vou passar a adotar uma estratégia que passa por aplicar sequencialmente cada uma das seguintes três transformações: em cada palavra (ou sequência separada por espaços), se o primeiro carater for uma letra, converto-a para maiúscula e converto as demais letras para minúsculas; substituo todas as ocorrências de “a”, “e”, “i” e “o” por “4”, “3”, “1” e “0”, respetivamente; como muitas vezes são pedidos sinais de pontuação, então se a soma dos digitos numéricos for par, junto um ponto final (“.”) e se for ímpar, junto um ponto de exclamação (“!).</p>
 <p>Agora só preciso de um programa para converter as frases para quando precisar das senhas.</p>
-<div class="section" id="tarefa-b">
-<h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h3>
+<div class="section" id="tarefa-a">
+<h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
 <p>Prepare um programa em Python que leia da consola uma frase e apresente a frase original e a senha correspondente de acordo com a estratégia apresentada.</p>
 <p>O input é uma única linha contendo uma string.
 O output é uma única linha contendo a string lida e a string resultante da codificação, separadas pela sequência espaço, dois pontos, espaço (ou seja, » : » (sem as aspas)).</p>
@@ -429,8 +441,8 @@ O output é uma única linha contendo a string lida e a string resultante da cod
 <p>A soma dos <span class="math notranslate nohighlight">\(n\)</span> primeiros termos de uma progressão aritmética pode ser calculada pela fórmula</p>
 <p><span class="math notranslate nohighlight">\(S_{n}={\frac{n}{2}}\cdot \left(a_{1}+a_{n}\right)\)</span></p>
 <p>Por exemplo, para a soma dos quatro primeiros termos da progressão <span class="math notranslate nohighlight">\(P_A = ( 15, 12, 9, 6, 3)\)</span>, como <span class="math notranslate nohighlight">\(n = 4\)</span>, <span class="math notranslate nohighlight">\(a_i = 15\)</span> e <span class="math notranslate nohighlight">\(a_n = 6\)</span>, a soma dos quatro primeiros números, <span class="math notranslate nohighlight">\(S(4)\)</span>, é <span class="math notranslate nohighlight">\(42\)</span>.</p>
-<div class="section" id="id1">
-<h3>Tarefa B<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h3>
+<div class="section" id="tarefa-b">
+<h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h3>
 <p>Faça um programa em Python que calcule o valor da soma dos <span class="math notranslate nohighlight">\(n\)</span> primeiros números de uma progressão aritmética.</p>
 <p>O input consiste em três inteiros, um por linha, que correspondem respetivamente à quantidade de números a considerar, ao primeiro termo e ao n-ésimo termo.
 O output é um número real que corresponde à soma dos <span class="math notranslate nohighlight">\(n\)</span> primeiros termos.</p>
@@ -535,6 +547,24 @@ O output é um número real que corresponde à área do triângulo.</p>
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="F2-2022-A.html" title="anterior page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">anterior</p>
+                <p class="prevnext-title">Segunda festa</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="F2R-2022.html" title="próximo page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">próximo</p>
+                <p class="prevnext-title">Segunda festa (M)</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
